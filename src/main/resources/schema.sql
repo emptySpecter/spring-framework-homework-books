@@ -8,7 +8,7 @@ CREATE TABLE books(
 	bookId SERIAL NOT NULL PRIMARY KEY,
 	name varchar(90) NULL,
 	pagecount bigint NULL,
-	pobigint bigint NULL,
+	points bigint NULL,
 	authorId bigint NULL,
 	typeId bigint NULL
 );
