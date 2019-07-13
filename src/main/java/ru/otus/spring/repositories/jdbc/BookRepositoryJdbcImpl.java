@@ -29,8 +29,16 @@ public class BookRepositoryJdbcImpl implements BookRepositoryJdbc {
 
 
     @Override
-    public void insert(Book book) {
-
+    public void save(Book book) {
+        final HashMap<String,Object> params = new HashMap<>(8);
+        params.put("id",book.getId());
+        params.put("name",book.getName());
+        params.put("pagecount",book.getPagecount());
+        params.put("points",book.getPoints());
+        params.put("authorId",book.getAuthor().getId());
+        params.put("typeId",book.getGenre().getId());
+        jdbc.update("insert into books (name, pagecount, points, authorId, typeId) " +
+                "values (:name, :pagecount, :points, :authorId, :typeId)",params );
     }
 
     @Override
@@ -38,15 +46,21 @@ public class BookRepositoryJdbcImpl implements BookRepositoryJdbc {
         final HashMap<String,Object> params = new HashMap<>(1);
         params.put("id",id);
         Book book = null;
-        Optional result = Optional.empty();
         try {
             book = jdbc.queryForObject(BOOKS_SELECT + " where bookId = :id",params,new BookMapper());
-            result = result.of(book);
         } catch (DataAccessException e) {
             e.printStackTrace();
         }
-        return result;
+        return Optional.ofNullable(book);
     }
+
+    @Override
+    public List<Book> getByAuthor(Author author) {
+        final HashMap<String,Object> params = new HashMap<>(1);
+        params.put("id",author.getId());
+        return jdbc.query(BOOKS_SELECT + " where books.authorId = :id",params,new BookMapper());
+    }
+
 
     @Override
     public List<Book> getAll() {
