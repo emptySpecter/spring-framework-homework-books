@@ -1,4 +1,4 @@
-package ru.otus.spring.domain.jdbc;
+package ru.otus.spring.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Book {
+public class Genre {
     long id;
     String name;
-    long pagecount;
-    long points;
-    Genre genre;
-    Author author;
 }

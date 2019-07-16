@@ -1,12 +1,11 @@
-package ru.otus.spring.repositories.jdbc;
+package ru.otus.spring.repositories;
 
 import lombok.AllArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.stereotype.Repository;
-import ru.otus.spring.domain.jdbc.Book;
-import ru.otus.spring.domain.jdbc.Genre;
+import ru.otus.spring.domain.Genre;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

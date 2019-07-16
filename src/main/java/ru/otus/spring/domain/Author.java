@@ -1,4 +1,4 @@
-package ru.otus.spring.domain.jdbc;
+package ru.otus.spring.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

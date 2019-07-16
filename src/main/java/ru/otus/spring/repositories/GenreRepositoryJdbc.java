@@ -1,7 +1,6 @@
-package ru.otus.spring.repositories.jdbc;
+package ru.otus.spring.repositories;
 
-import ru.otus.spring.domain.jdbc.Author;
-import ru.otus.spring.domain.jdbc.Genre;
+import ru.otus.spring.domain.Genre;
 
 import java.util.List;
 import java.util.Optional;

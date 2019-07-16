@@ -1,22 +1,45 @@
 package ru.otus.spring;
 
-import org.h2.tools.Console;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import ru.otus.spring.domain.jdbc.Author;
-import ru.otus.spring.domain.jdbc.Book;
-import ru.otus.spring.domain.jdbc.Genre;
-import ru.otus.spring.repositories.jdbc.AuthorRepositoryJdbc;
-import ru.otus.spring.repositories.jdbc.AuthorRepositoryJdbcImpl;
-import ru.otus.spring.repositories.jdbc.BookRepositoryJdbc;
-import ru.otus.spring.repositories.jdbc.GenreRepositoryJdbc;
+import ru.otus.spring.domain.Author;
+import ru.otus.spring.domain.Book;
+import ru.otus.spring.domain.Genre;
+import ru.otus.spring.repositories.AuthorRepositoryJdbc;
+import ru.otus.spring.repositories.BookRepositoryJdbc;
+import ru.otus.spring.repositories.GenreRepositoryJdbc;
+
+import java.util.Map;
 
 @SpringBootApplication
 public class Main {
 
     public static void main(String[] args) throws Exception {
         ApplicationContext context = SpringApplication.run(Main.class);
+
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        Genre genre = new Genre(2, "Name");
+        Author author = new Author(3, "First", "Second");
+        Book book = new Book(4,"Book", 15, 10, genre, author);
+        Map<String, Object> map = objectMapper.convertValue(book, new TypeReference<Map<String, Object>>() {});
+
+        System.out.println("\n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        for (Map.Entry entry : map.entrySet()) {
+            Object value = entry.getValue();
+            if(value instanceof Map) {
+                for(Map.Entry subentry : ((Map<String, Object>)value).entrySet()){
+                    System.out.print(subentry.getValue() + " ");
+                }
+            } else {
+                System.out.print(value + " ");
+            }
+        }
+        System.out.println();
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n");
 
         AuthorRepositoryJdbc repository = context.getBean(AuthorRepositoryJdbc.class);
         GenreRepositoryJdbc repository2 = context.getBean(GenreRepositoryJdbc.class);
@@ -36,7 +59,7 @@ public class Main {
         repository3.save(new Book(1000,"Dopio",10,13,new Genre(1,"ds"),new Author(20,"ds","dsd")));
         System.out.println(repository3.getAll());
         repository3.getById(200).ifPresent(System.out::println);
-               Console.main(args);
+//               Console.main(args);
 
     }
 }
