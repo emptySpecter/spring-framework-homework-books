@@ -5,7 +5,7 @@ import ru.otus.spring.domain.Genre;
 import java.util.List;
 import java.util.Optional;
 
-public interface GenreRepositoryJdbc {
+public interface GenreRepository {
 
     Optional<Genre> getById(long id);
 

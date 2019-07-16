@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @AllArgsConstructor
 @Repository
-public class AuthorRepositoryJdbcImpl implements  AuthorRepositoryJdbc {
+public class AuthorRepositoryImpl implements AuthorRepository {
 
     public static final String AUTHORS_SELECT = "select authorId, name, surname from authors";
     private final NamedParameterJdbcOperations jdbc;
@@ -26,7 +26,7 @@ public class AuthorRepositoryJdbcImpl implements  AuthorRepositoryJdbc {
         params.put("id",id);
         Author author = null;
         try {
-            author = jdbc.queryForObject(AUTHORS_SELECT + " where authorId = :id",params,new AuthorRepositoryJdbcImpl.AuthorMapper());
+            author = jdbc.queryForObject(AUTHORS_SELECT + " where authorId = :id",params,new AuthorRepositoryImpl.AuthorMapper());
         } catch (DataAccessException e) {
             e.printStackTrace();
         }

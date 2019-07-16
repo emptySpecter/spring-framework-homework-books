@@ -8,9 +8,9 @@ import org.springframework.context.ApplicationContext;
 import ru.otus.spring.domain.Author;
 import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Genre;
-import ru.otus.spring.repositories.AuthorRepositoryJdbc;
-import ru.otus.spring.repositories.BookRepositoryJdbc;
-import ru.otus.spring.repositories.GenreRepositoryJdbc;
+import ru.otus.spring.repositories.AuthorRepository;
+import ru.otus.spring.repositories.BookRepository;
+import ru.otus.spring.repositories.GenreRepository;
 
 import java.util.Map;
 
@@ -41,9 +41,9 @@ public class Main {
         System.out.println();
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n");
 
-        AuthorRepositoryJdbc repository = context.getBean(AuthorRepositoryJdbc.class);
-        GenreRepositoryJdbc repository2 = context.getBean(GenreRepositoryJdbc.class);
-        BookRepositoryJdbc repository3 = context.getBean(BookRepositoryJdbc.class);
+        AuthorRepository repository = context.getBean(AuthorRepository.class);
+        GenreRepository repository2 = context.getBean(GenreRepository.class);
+        BookRepository repository3 = context.getBean(BookRepository.class);
         System.out.println(repository.getById(1));
         System.out.println(repository.getAll());
 

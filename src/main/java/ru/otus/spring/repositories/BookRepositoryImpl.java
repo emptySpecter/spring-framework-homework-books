@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @Repository
 @AllArgsConstructor
-public class BookRepositoryJdbcImpl implements BookRepositoryJdbc {
+public class BookRepositoryImpl implements BookRepository {
 
     public static final String BOOKS_SELECT = "select bookId, books.name as name, authors.name as authorName, authors.surname as authorSurname, " +
             "pagecount, points, books.authorId as authorId, books.typeId as typeId, types.name as genre " +
@@ -64,7 +64,7 @@ public class BookRepositoryJdbcImpl implements BookRepositoryJdbc {
 
     @Override
     public List<Book> getAll() {
-        return jdbc.query(BOOKS_SELECT,new BookRepositoryJdbcImpl.BookMapper());
+        return jdbc.query(BOOKS_SELECT,new BookRepositoryImpl.BookMapper());
     }
 
     private static class BookMapper implements RowMapper<Book> {

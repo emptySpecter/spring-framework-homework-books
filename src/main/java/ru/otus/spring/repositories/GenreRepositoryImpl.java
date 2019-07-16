@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Repository
 @AllArgsConstructor
-public class GenreRepositoryJdbcImpl implements GenreRepositoryJdbc {
+public class GenreRepositoryImpl implements GenreRepository {
 
     public static final String GENRE_SELECT = "select typeId, name from types";
     private final NamedParameterJdbcOperations jdbc;
@@ -26,7 +26,7 @@ public class GenreRepositoryJdbcImpl implements GenreRepositoryJdbc {
         params.put("id",id);
         Genre genre = null;
         try {
-            genre = jdbc.queryForObject(GENRE_SELECT + " where typeId = :id",params,new GenreRepositoryJdbcImpl.GenreMapper());
+            genre = jdbc.queryForObject(GENRE_SELECT + " where typeId = :id",params,new GenreRepositoryImpl.GenreMapper());
         } catch (DataAccessException e) {
             e.printStackTrace();
         }
@@ -36,7 +36,7 @@ public class GenreRepositoryJdbcImpl implements GenreRepositoryJdbc {
 
     @Override
     public List<Genre> getAll() {
-        return jdbc.query(GENRE_SELECT, new GenreRepositoryJdbcImpl.GenreMapper());
+        return jdbc.query(GENRE_SELECT, new GenreRepositoryImpl.GenreMapper());
     }
 
     private static class GenreMapper implements RowMapper<Genre> {
