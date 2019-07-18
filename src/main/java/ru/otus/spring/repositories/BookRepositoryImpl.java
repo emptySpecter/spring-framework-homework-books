@@ -49,7 +49,7 @@ public class BookRepositoryImpl implements BookRepository {
         try {
             book = jdbc.queryForObject(BOOKS_SELECT + " where bookId = :id",params,new BookMapper());
         } catch (DataAccessException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         return Optional.ofNullable(book);
     }

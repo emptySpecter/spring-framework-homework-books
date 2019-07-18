@@ -6,7 +6,7 @@ CREATE TABLE authors(
 
 CREATE TABLE books(
 	bookId SERIAL NOT NULL PRIMARY KEY,
-	name varchar(90) NULL,
+	name varchar(255) NULL,
 	pagecount bigint NULL,
 	points bigint NULL,
 	authorId bigint NULL,
