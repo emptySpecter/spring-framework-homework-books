@@ -28,7 +28,7 @@ public class AuthorRepositoryImpl implements AuthorRepository {
         try {
             author = jdbc.queryForObject(AUTHORS_SELECT + " where authorId = :id",params,new AuthorRepositoryImpl.AuthorMapper());
         } catch (DataAccessException e) {
-//            e.printStackTrace();
+            System.out.println("Author with id = " + id + " doesn't exist!");
         }
         return Optional.ofNullable(author);
     }

@@ -28,7 +28,7 @@ public class GenreRepositoryImpl implements GenreRepository {
         try {
             genre = jdbc.queryForObject(GENRE_SELECT + " where typeId = :id",params,new GenreRepositoryImpl.GenreMapper());
         } catch (DataAccessException e) {
-//            e.printStackTrace();
+            System.out.println("Genre with id = " + id + " doesn't exist!");
         }
         return Optional.ofNullable(genre);
     }

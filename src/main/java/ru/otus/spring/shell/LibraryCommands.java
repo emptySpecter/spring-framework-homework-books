@@ -19,6 +19,7 @@ import ru.otus.spring.repositories.GenreRepository;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -106,23 +107,23 @@ public class LibraryCommands {
                 points = Integer.valueOf(tmp);
                 break;
             }
-            out.print("Points must be an integer number!\n");
+            out.print("Number of points must be an integer number!\n");
         }
 
-        Author author = null;
+        Author author;
         while (true){
-            int id = 0;
             out.print("Enter author id:\n");
             String tmp = in.nextLine();
             if (tmp.matches("[\\d]+")){
-                id = Integer.valueOf(tmp);
-                Optional<Author> optional = authorRepository.getById(id);
-                if(authorRepository.getById(id).isPresent()){
-                    author = optional.get();
+                int id = Integer.valueOf(tmp);
+                try {
+                    author = authorRepository.getById(id).get();
                     break;
+                } catch (NoSuchElementException e) {
                 }
             }
-            out.print("Author with entered id doesn't exist\n");
+            out.print("Wrong author's id!\n");
         }
+        author.getId();
     }
 }
