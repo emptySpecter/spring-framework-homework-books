@@ -124,6 +124,33 @@ public class LibraryCommands {
             }
             out.print("Wrong author's id!\n");
         }
-        author.getId();
+
+        Genre genre;
+        while (true){
+            out.print("Enter genre id:\n");
+            String tmp = in.nextLine();
+            if (tmp.matches("[\\d]+")){
+                int id = Integer.valueOf(tmp);
+                try {
+                    genre = genreRepository.getById(id).get();
+                    break;
+                } catch (NoSuchElementException e) {
+                }
+            }
+            out.print("Wrong genre's id!\n");
+        }
+
+        out.print("\n\nYou entered: \n");
+        out.print("Book title: " + bookName + "\n");
+        out.print("Number of pages: " + pagecount + "\n");
+        out.print("Number of points: " + points + "\n");
+        out.print("Author name and surname: " + author.getName() + " " + author.getSurname() + "\n");
+        out.print("Genre: " + genre.getName() + "\n");
+        out.print("\n\nWould you like to add this book to DB? [Y,N]:\n");
+        String confirmation = in.nextLine();
+        if (confirmation.equals("Y")){
+            bookRepository.save(new Book(0,bookName,pagecount,points,genre,author));
+        }
+
     }
 }

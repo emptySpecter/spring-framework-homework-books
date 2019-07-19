@@ -2,6 +2,7 @@ package ru.otus.spring;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.h2.tools.Console;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -59,7 +60,7 @@ public class Main {
         repository3.save(new Book(1000,"Dopio",10,13,new Genre(1,"ds"),new Author(20,"ds","dsd")));
         System.out.println(repository3.getAll());
         repository3.getById(200).ifPresent(System.out::println);
-//               Console.main(args);
+               Console.main(args);
 
     }
 }
