@@ -30,24 +30,24 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public void save(Book book) {
-        final HashMap<String,Object> params = new HashMap<>(8);
-        params.put("id",book.getId());
-        params.put("name",book.getName());
-        params.put("pagecount",book.getPagecount());
-        params.put("points",book.getPoints());
-        params.put("authorId",book.getAuthor().getId());
-        params.put("typeId",book.getGenre().getId());
+        final HashMap<String, Object> params = new HashMap<>(8);
+        params.put("id", book.getId());
+        params.put("name", book.getName());
+        params.put("pagecount", book.getPagecount());
+        params.put("points", book.getPoints());
+        params.put("authorId", book.getAuthor().getId());
+        params.put("typeId", book.getGenre().getId());
         jdbc.update("insert into books (name, pagecount, points, authorId, typeId) " +
-                "values (:name, :pagecount, :points, :authorId, :typeId)",params );
+                "values (:name, :pagecount, :points, :authorId, :typeId)", params);
     }
 
     @Override
     public Optional<Book> getById(long id) {
-        final HashMap<String,Object> params = new HashMap<>(1);
-        params.put("id",id);
+        final HashMap<String, Object> params = new HashMap<>(1);
+        params.put("id", id);
         Book book = null;
         try {
-            book = jdbc.queryForObject(BOOKS_SELECT + " where bookId = :id",params,new BookMapper());
+            book = jdbc.queryForObject(BOOKS_SELECT + " where bookId = :id", params, new BookMapper());
         } catch (DataAccessException e) {
             System.out.println("Book with id = " + id + " doesn't exist!");
         }
@@ -56,15 +56,15 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public List<Book> getByAuthor(Author author) {
-        final HashMap<String,Object> params = new HashMap<>(1);
-        params.put("id",author.getId());
-        return jdbc.query(BOOKS_SELECT + " where books.authorId = :id",params,new BookMapper());
+        final HashMap<String, Object> params = new HashMap<>(1);
+        params.put("id", author.getId());
+        return jdbc.query(BOOKS_SELECT + " where books.authorId = :id", params, new BookMapper());
     }
 
 
     @Override
     public List<Book> getAll() {
-        return jdbc.query(BOOKS_SELECT,new BookRepositoryImpl.BookMapper());
+        return jdbc.query(BOOKS_SELECT, new BookRepositoryImpl.BookMapper());
     }
 
     private static class BookMapper implements RowMapper<Book> {
@@ -79,7 +79,7 @@ public class BookRepositoryImpl implements BookRepository {
             String authorSurname = resultSet.getString("authorSurname");
             long typeId = resultSet.getLong("typeId");
             String genre = resultSet.getString("genre");
-            return new Book(id,name,pagecount,points,new Genre(typeId,genre),new Author(authorId,authorName,authorSurname));
+            return new Book(id, name, pagecount, points, new Genre(typeId, genre), new Author(authorId, authorName, authorSurname));
         }
     }
 

@@ -1,8 +1,6 @@
 package ru.otus.spring.shell;
 
-import lombok.RequiredArgsConstructor;
 import org.jline.terminal.Terminal;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
@@ -20,7 +18,6 @@ import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.Scanner;
 
 import static ru.otus.spring.shell.TableHelper.getTableModel;
@@ -34,7 +31,7 @@ public class LibraryCommands {
     private final GenreRepository genreRepository;
     private final BookRepository bookRepository;
 
-    public LibraryCommands(AuthorRepository authorRepository, GenreRepository genreRepository, BookRepository bookRepository,@Lazy Terminal terminal) {
+    public LibraryCommands(AuthorRepository authorRepository, GenreRepository genreRepository, BookRepository bookRepository, @Lazy Terminal terminal) {
         this.authorRepository = authorRepository;
         this.genreRepository = genreRepository;
         this.bookRepository = bookRepository;
@@ -44,7 +41,7 @@ public class LibraryCommands {
     @ShellMethod(value = "Display list of authors", key = {"al", "authors"})
     public void authorsList() {
         List<Author> authors = authorRepository.getAll();
-
+//todo if empty  list ???
         TableModel model = getTableModel(authors);
         TableBuilder tableBuilder = new TableBuilder(model);
         tableBuilder.addInnerBorder(BorderStyle.fancy_light);
@@ -74,12 +71,12 @@ public class LibraryCommands {
         System.out.print(tableBuilder.build().render(160));
     }
 
-    @ShellMethod(value = "Add new book", key = {"ab","add-book"})
+    @ShellMethod(value = "Add new book", key = {"ab", "add-book"})
     public void addBook() throws UnsupportedEncodingException {
         Scanner in = new Scanner(terminal.input(), "UTF-8");
         PrintStream out = new PrintStream(terminal.output(), true, "UTF-8");
 
-        String bookName = "";
+        String bookName;
         while (true) {
             out.print("Enter book title:\n");
             bookName = in.nextLine();
@@ -87,10 +84,10 @@ public class LibraryCommands {
             out.print("Length of book title must less than 256 symbols!\n");
         }
 
-        int pagecount = 0;
+        int pagecount;
         while (true) {
             out.print("Enter number of pages:\n");
-            String tmp  = in.nextLine();
+            String tmp = in.nextLine();
             if (tmp.matches("[\\d]+")) {
                 pagecount = Integer.valueOf(tmp);
                 break;
@@ -99,10 +96,10 @@ public class LibraryCommands {
         }
 
 
-        int points = 0;
+        int points;
         while (true) {
             out.print("Enter number of points:\n");
-            String tmp  = in.nextLine();
+            String tmp = in.nextLine();
             if (tmp.matches("[\\d]+")) {
                 points = Integer.valueOf(tmp);
                 break;
@@ -111,10 +108,10 @@ public class LibraryCommands {
         }
 
         Author author;
-        while (true){
+        while (true) {
             out.print("Enter author id:\n");
             String tmp = in.nextLine();
-            if (tmp.matches("[\\d]+")){
+            if (tmp.matches("[\\d]+")) {
                 int id = Integer.valueOf(tmp);
                 try {
                     author = authorRepository.getById(id).get();
@@ -126,10 +123,10 @@ public class LibraryCommands {
         }
 
         Genre genre;
-        while (true){
+        while (true) {
             out.print("Enter genre id:\n");
             String tmp = in.nextLine();
-            if (tmp.matches("[\\d]+")){
+            if (tmp.matches("[\\d]+")) {
                 int id = Integer.valueOf(tmp);
                 try {
                     genre = genreRepository.getById(id).get();
@@ -148,8 +145,8 @@ public class LibraryCommands {
         out.print("Genre: " + genre.getName() + "\n");
         out.print("\n\nWould you like to add this book to DB? [Y,N]:\n");
         String confirmation = in.nextLine();
-        if (confirmation.equals("Y")){
-            bookRepository.save(new Book(0,bookName,pagecount,points,genre,author));
+        if (confirmation.equals("Y")) {
+            bookRepository.save(new Book(0, bookName, pagecount, points, genre, author));
         }
 
     }

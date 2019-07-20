@@ -22,11 +22,11 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
     @Override
     public Optional<Author> getById(long id) {
-        final HashMap<String,Object> params = new HashMap<>(1);
-        params.put("id",id);
+        final HashMap<String, Object> params = new HashMap<>(1);
+        params.put("id", id);
         Author author = null;
         try {
-            author = jdbc.queryForObject(AUTHORS_SELECT + " where authorId = :id",params,new AuthorRepositoryImpl.AuthorMapper());
+            author = jdbc.queryForObject(AUTHORS_SELECT + " where authorId = :id", params, new AuthorRepositoryImpl.AuthorMapper());
         } catch (DataAccessException e) {
             System.out.println("Author with id = " + id + " doesn't exist!");
         }

@@ -22,11 +22,11 @@ public class GenreRepositoryImpl implements GenreRepository {
 
     @Override
     public Optional<Genre> getById(long id) {
-        final HashMap<String,Object> params = new HashMap<>(1);
-        params.put("id",id);
+        final HashMap<String, Object> params = new HashMap<>(1);
+        params.put("id", id);
         Genre genre = null;
         try {
-            genre = jdbc.queryForObject(GENRE_SELECT + " where typeId = :id",params,new GenreRepositoryImpl.GenreMapper());
+            genre = jdbc.queryForObject(GENRE_SELECT + " where typeId = :id", params, new GenreRepositoryImpl.GenreMapper());
         } catch (DataAccessException e) {
             System.out.println("Genre with id = " + id + " doesn't exist!");
         }
