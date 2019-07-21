@@ -1,19 +1,22 @@
-CREATE TABLE authors(
-	authorId SERIAL NOT NULL PRIMARY KEY,
-	name varchar(50) NULL,
-	surname varchar(70) NULL
+create TABLE authors(
+	authorId BIGSERIAL NOT NULL PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	surname VARCHAR(70) NOT NULL
 );
 
-CREATE TABLE books(
-	bookId SERIAL NOT NULL PRIMARY KEY,
-	name varchar(255) NULL,
-	pagecount bigint NULL,
-	points bigint NULL,
-	authorId bigint NULL,
-	typeId bigint NULL
+create TABLE types(
+	typeId BIGSERIAL NOT NULL PRIMARY KEY,
+	name VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE types(
-	typeId SERIAL NOT NULL PRIMARY KEY,
-	name varchar(30) NULL
+create TABLE books(
+	bookId BIGSERIAL NOT NULL PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	pagecount BIGINT NOT NULL,
+	points BIGINT NOT NULL,
+	authorId BIGINT NOT NULL,
+	typeId BIGINT NOT NULL,
+	CONSTRAINT type_books FOREIGN KEY (authorId) references authors(authorId) ON delete RESTRICT ON update CASCADE,
+	CONSTRAINT author_books FOREIGN KEY (typeId) references types(typeId) ON delete RESTRICT ON update CASCADE
 );
+

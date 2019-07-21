@@ -2,3 +2,5 @@ spring:
   shell:
     interactive:
       enabled: false
+  datasource:
+    data: data_test.sql

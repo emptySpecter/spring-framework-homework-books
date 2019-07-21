@@ -17,7 +17,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class GenreRepositoryImpl implements GenreRepository {
 
-    public static final String GENRE_SELECT = "select typeId, name from types";
+    private static final String GENRE_SELECT = "select typeId, name from types";
     private final NamedParameterJdbcOperations jdbc;
 
     @Override

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Author {
-    long id;
-    String name;
-    String surname;
+    private long id;
+    private String name;
+    private String surname;
 }

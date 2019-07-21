@@ -19,7 +19,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class BookRepositoryImpl implements BookRepository {
 
-    public static final String BOOKS_SELECT = "select bookId, books.name as name, authors.name as authorName, authors.surname as authorSurname, " +
+    private static final String BOOKS_SELECT = "select bookId, books.name as name, authors.name as authorName, authors.surname as authorSurname, " +
             "pagecount, points, books.authorId as authorId, books.typeId as typeId, types.name as genre " +
             "from books " +
             "inner join authors on books.authorId = authors.authorId " +

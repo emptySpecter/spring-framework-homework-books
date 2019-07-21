@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Book {
-    long id;
-    String name;
-    long pagecount;
-    long points;
-    Genre genre;
-    Author author;
+    private long id;
+    private String name;
+    private long pagecount;
+    private long points;
+    private Genre genre;
+    private Author author;
 }

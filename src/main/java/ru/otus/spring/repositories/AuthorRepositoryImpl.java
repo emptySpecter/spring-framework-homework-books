@@ -1,6 +1,6 @@
 package ru.otus.spring.repositories;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
@@ -13,11 +13,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Repository
 public class AuthorRepositoryImpl implements AuthorRepository {
 
-    public static final String AUTHORS_SELECT = "select authorId, name, surname from authors";
+    private static final String AUTHORS_SELECT = "select authorId, name, surname from authors";
     private final NamedParameterJdbcOperations jdbc;
 
     @Override

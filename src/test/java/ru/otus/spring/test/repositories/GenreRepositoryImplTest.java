@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Репозиторий для работы с жанрами ")
 @JdbcTest
@@ -33,9 +32,7 @@ public class GenreRepositoryImplTest {
     @Test
     public void shouldReturnCorrectGenreById() {
         Optional<Genre> optional = repository.getById(1);
-        assertThat(optional.isPresent());
-        Genre genre = optional.get();
-        assertEquals(genre.getId(), 1);
-        assertEquals(genre.getName(), "Science fiction");
+        assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
+                .hasFieldOrPropertyWithValue("name", "Science fiction");
     }
 }

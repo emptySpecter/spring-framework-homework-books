@@ -36,21 +36,28 @@ public class BookRepositoryImplTest {
     @Test
     public void shouldReturnCorrectBookById() {
         Optional<Book> optional = repository.getById(1);
-        assertThat(optional.isPresent());
-        Book book = optional.get();
-        assertEquals(book.getId(), 1);
-        assertEquals(book.getName(), "A Daughter of the Snows");
+        assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
+                .hasFieldOrPropertyWithValue("name", "A Daughter of the Snows");
     }
 
     @DisplayName("должен добовлять книгу в базу")
     @Test
     public void shouldCorrectAddBook() {
-        int beforeCount = repository.getAll().size();
-        Genre genre = new Genre(2, "Name");
-        Author author = new Author(3, "First", "Second");
-        Book book = new Book(4, "Book", 15, 10, genre, author);
+        final long typeId = 2;
+        final long authorId = 3;
+        final long bookId = 0;
+        final long pagecount = 15;
+        final long points = 10;
+        final String genreName = "Name";
+        final String authorName = "First";
+        final String authorSurname = "Second";
+        final String bookName = "Book";
+        int countBefore = repository.getAll().size();
+        Genre genre = new Genre(typeId, genreName);
+        Author author = new Author(authorId, authorName, authorSurname);
+        Book book = new Book(bookId, bookName, pagecount, points, genre, author);
         repository.save(book);
-        int afterCount = repository.getAll().size();
-        assertEquals(afterCount - beforeCount, 1);
+        int countAfter = repository.getAll().size();
+        assertEquals(countAfter - countBefore, 1);
     }
 }

@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Репозиторий для работы с авторами ")
 @JdbcTest
@@ -33,9 +32,8 @@ public class AuthorRepositoryImplTest {
     @Test
     public void shouldReturnCorrectAuthorById() {
         Optional<Author> optional = repository.getById(1);
-        assertThat(optional.isPresent());
-        Author author = optional.get();
-        assertEquals(author.getId(), 1);
-        assertEquals(author.getSurname(), "Howells");
+//        assertThat(optional.isPresent()).isTrue();
+        assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
+                .hasFieldOrPropertyWithValue("surname", "Howells");
     }
 }
