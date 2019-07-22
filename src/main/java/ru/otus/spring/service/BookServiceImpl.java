@@ -47,11 +47,11 @@ public class BookServiceImpl implements BookService {
 
         Book book = new Book();
         book.setId(0L);
-        book.setName(bookName());
-        book.setPagecount(pagecount());
-        book.setPoints(points());
-        book.setAuthor(author());
-        book.setGenre(genre());
+        book.setName(readBookName());
+        book.setPagecount(readPagecount());
+        book.setPoints(readPoints());
+        book.setAuthor(readAuthor());
+        book.setGenre(readGenre());
 
         out.print("\nYou entered: \n\n");
         out.print("Book title: " + book.getName() + "\n");
@@ -68,7 +68,7 @@ public class BookServiceImpl implements BookService {
 
     }
 
-    private String bookName() {
+    private String readBookName() {
         String bookName;
         while (true) {
             out.print(ENTER_BOOK_TITLE);
@@ -79,7 +79,7 @@ public class BookServiceImpl implements BookService {
         return bookName;
     }
 
-    private int pagecount() {
+    private int readPagecount() {
         int pagecount;
         while (true) {
             out.print(ENTER_NUMBER_OF_PAGES);
@@ -93,7 +93,7 @@ public class BookServiceImpl implements BookService {
         return pagecount;
     }
 
-    private int points() {
+    private int readPoints() {
         int points;
         while (true) {
             out.print(ENTER_NUMBER_OF_POINTS);
@@ -107,7 +107,7 @@ public class BookServiceImpl implements BookService {
         return points;
     }
 
-    private Author author() {
+    private Author readAuthor() {
         Author author;
         while (true) {
             out.print(ENTER_AUTHOR_ID);
@@ -125,7 +125,7 @@ public class BookServiceImpl implements BookService {
         return author;
     }
 
-    private Genre genre() {
+    private Genre readGenre() {
         Genre genre;
         while (true) {
             out.print(ENTER_GENRE_ID);
