@@ -9,10 +9,10 @@ spring:
 
   jpa:
     generate-ddl: false
-    #generate-ddl: true
+    #    generate-ddl: true
     hibernate:
       ddl-auto: none
-      #ddl-auto: create-drop
+    #      ddl-auto: create-drop
 
     show-sql: true
 

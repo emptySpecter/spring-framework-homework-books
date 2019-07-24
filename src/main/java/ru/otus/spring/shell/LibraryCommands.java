@@ -14,7 +14,6 @@ import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.GenreRepository;
 import ru.otus.spring.service.BookService;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import static ru.otus.spring.shell.TableHelper.getTableModel;
