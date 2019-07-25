@@ -16,6 +16,9 @@ spring:
 
     show-sql: true
 
+    liquibase:
+      enabled: true
+
 #logging:
 #  level:
 #    root: DEBUG

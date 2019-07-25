@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2019-07-25--0001--comments
+      author: danila
+      createTable:
+        tableName: comments
+        columns:
+          - column:
+              name: commentId
+              type: bigserial
+              constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: pk_comments
+          - column:
+              name: bookId
+              type: bigint
+              constraints:
+                nullable: false
+                foreignKeyName: fk_book_comments
+                references: books(bookId)
+          - column:
+              name: text
+              type: varchar(256)

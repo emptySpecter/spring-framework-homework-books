@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0001-comments-test-data
+      author: danila
+      context: test
+      runOnChange: true
+      loadUpdateData:
+        primaryKey: commentId
+        file: data/comments.csv
+        relativeToChangelogFile: true
+        separator: ;
+        quotChar: '"'
+        seperator: ';'
+        encoding: UTF-8
+        tableName: comments

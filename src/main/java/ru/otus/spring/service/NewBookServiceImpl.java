@@ -1,6 +1,5 @@
 package ru.otus.spring.service;
 
-import org.jline.terminal.Terminal;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.otus.spring.domain.Author;
@@ -11,12 +10,11 @@ import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.GenreRepository;
 
 import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 @Service
-public class BookServiceImpl implements BookService {
+public class NewBookServiceImpl implements NewBookService {
 
     private static final String ENTER_BOOK_TITLE = "Enter book title:\n";
     private static final String TITLE_MUST_LESS_THAN_256_SYMBOLS = "Length of book title must less than 256 symbols!\n";
@@ -32,20 +30,21 @@ public class BookServiceImpl implements BookService {
     private final AuthorRepository authorRepository;
     private final GenreRepository genreRepository;
     private final BookRepository bookRepository;
-    PrintStream out;
+    private PrintStream out;
     private Scanner in;
 
-    public BookServiceImpl(Terminal terminal, AuthorRepository authorRepository, GenreRepository genreRepository, BookRepository bookRepository) throws UnsupportedEncodingException {
+
+    public NewBookServiceImpl(AuthorRepository authorRepository, GenreRepository genreRepository, BookRepository bookRepository) {
         this.authorRepository = authorRepository;
         this.genreRepository = genreRepository;
         this.bookRepository = bookRepository;
-        in = new Scanner(terminal.input(), "UTF-8");
-        out = new PrintStream(terminal.output(), true, "UTF-8");
     }
 
     @Override
     @Transactional
-    public void newBook() {
+    public void newBook(Scanner in, PrintStream out) {
+        this.in = in;
+        this.out = out;
 
         Book book = new Book();
         book.setId(0L);
