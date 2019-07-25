@@ -5,7 +5,6 @@ import ru.otus.spring.domain.Author;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,9 +21,6 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
     @Override
     public List<Author> getAll() {
-        TypedQuery<Author> query = em.createQuery(
-                "select a from Author a",
-                Author.class);
-        return query.getResultList();
+        return  em.createQuery("select a from Author a", Author.class).getResultList();
     }
 }

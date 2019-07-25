@@ -5,7 +5,6 @@ import ru.otus.spring.domain.Genre;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,9 +21,6 @@ public class GenreRepositoryImpl implements GenreRepository {
 
     @Override
     public List<Genre> getAll() {
-        TypedQuery<Genre> query = em.createQuery(
-                "select g from Genre g",
-                Genre.class);
-        return query.getResultList();
+        return em.createQuery("select g from Genre g", Genre.class).getResultList();
     }
 }

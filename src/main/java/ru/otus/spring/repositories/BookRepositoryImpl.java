@@ -6,7 +6,6 @@ import ru.otus.spring.domain.Book;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,21 +17,14 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public void save(Book book) {
-        if (book.getId() <= 0) {
-            em.persist(book);
-        } else {
-            em.merge(book);
-        }
-
+        if (book.getId() <= 0) em.persist(book);
+        else em.merge(book);
     }
 
     @Override
     public List<Book> getByAuthor(Author author) {
-        TypedQuery<Book> query = em.createQuery(
-                "select b from Book b join fetch b.genre join fetch b.author where b.author=:author",
-                Book.class);
-        query.setParameter("author", author);
-        return query.getResultList();
+        return em.createQuery("select b from Book b join fetch b.genre join fetch b.author where b.author=:author", Book.class)
+                .setParameter("author", author).getResultList();
     }
 
     @Override
@@ -42,9 +34,6 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public List<Book> getAll() {
-        TypedQuery<Book> query = em.createQuery(
-                "select b from Book b join fetch b.genre join fetch b.author",
-                Book.class);
-        return query.getResultList();
+        return em.createQuery("select b from Book b join fetch b.genre join fetch b.author", Book.class).getResultList();
     }
 }
