@@ -71,6 +71,8 @@ public class LibraryCommands {
 
     @ShellMethod(value = "Display list of comments", key = {"cl", "comments"})
     public void commentsList() {
+//        BookWithComments book = bookRepository.getByIdWithComments(1).get();
+//        List<BookWithComments> books = bookRepository.getAllWithComments();
         List<Comment> comments = commentRepository.getAll();
         if (!comments.isEmpty()) {
             TableModel model = getTableModel(comments);

@@ -18,8 +18,4 @@ public class Comment {
     private long id;
     @Column(name = "text", nullable = false)
     private String text;
-    @ManyToOne(targetEntity = Book.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "bookid")
-    private Book book;
-
 }
