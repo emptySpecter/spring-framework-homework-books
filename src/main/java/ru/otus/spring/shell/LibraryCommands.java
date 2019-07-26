@@ -17,6 +17,7 @@ import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.CommentRepository;
 import ru.otus.spring.repositories.GenreRepository;
 import ru.otus.spring.service.NewBookService;
+import ru.otus.spring.service.NewCommentService;
 
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
@@ -34,6 +35,7 @@ public class LibraryCommands {
     private final BookRepository bookRepository;
     private final CommentRepository commentRepository;
     private final NewBookService newBookService;
+    private final NewCommentService newCommentService;
     private PrintStream out;
     private Scanner in;
 
@@ -98,5 +100,10 @@ public class LibraryCommands {
     @ShellMethod(value = "Add new book", key = {"ab", "add-book"})
     public void addBook() {
         newBookService.newBook(in, out);
+    }
+
+    @ShellMethod(value = "Add new comment", key = {"ac", "add-cooment"})
+    public void addComment() {
+        newCommentService.newComment(in, out);
     }
 }

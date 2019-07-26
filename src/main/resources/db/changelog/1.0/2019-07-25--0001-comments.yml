@@ -7,11 +7,11 @@ databaseChangeLog:
         columns:
           - column:
               name: commentId
-              type: bigserial
+              type: bigint
+              autoIncrement: true
               constraints:
                 nullable: false
                 primaryKey: true
-                primaryKeyName: pk_comments
           - column:
               name: bookId
               type: bigint

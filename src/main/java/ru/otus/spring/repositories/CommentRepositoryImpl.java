@@ -1,6 +1,7 @@
 package ru.otus.spring.repositories;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import ru.otus.spring.domain.Comment;
 
 import javax.persistence.EntityManager;
@@ -10,13 +11,15 @@ import java.util.Optional;
 
 @Repository
 public class CommentRepositoryImpl implements CommentRepository {
+
     @PersistenceContext
     private EntityManager em;
 
 
     @Override
     public void save(Comment comment) {
-
+        if (comment.getId() <= 0) em.persist(comment);
+        else em.merge(comment);
     }
 
     @Override
