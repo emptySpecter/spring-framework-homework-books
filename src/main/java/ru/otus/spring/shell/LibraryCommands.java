@@ -24,7 +24,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Scanner;
 
-import static ru.otus.spring.shell.TableHelper.getTableModel;
+import static ru.otus.spring.shell.TableHelper.getTableModelList;
 
 @RequiredArgsConstructor
 @ShellComponent
@@ -50,11 +50,11 @@ public class LibraryCommands {
     public void authorsList() {
         List<Author> authors = authorRepository.getAll();
         if (!authors.isEmpty()) {
-            TableModel model = getTableModel(authors);
+            TableModel model = getTableModelList(authors);
             TableBuilder tableBuilder = new TableBuilder(model);
             tableBuilder.addInnerBorder(BorderStyle.fancy_light);
             tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            System.out.print(tableBuilder.build().render(80));
+            out.print(tableBuilder.build().render(80));
         }
     }
 
@@ -62,11 +62,11 @@ public class LibraryCommands {
     public void genresList() {
         List<Genre> genres = genreRepository.getAll();
         if (!genres.isEmpty()) {
-            TableModel model = getTableModel(genres);
+            TableModel model = getTableModelList(genres);
             TableBuilder tableBuilder = new TableBuilder(model);
             tableBuilder.addInnerBorder(BorderStyle.fancy_light);
             tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            System.out.print(tableBuilder.build().render(80));
+            out.print(tableBuilder.build().render(80));
         }
     }
 
@@ -77,11 +77,11 @@ public class LibraryCommands {
 //        List<BookWithComments> books = bookRepository.getAllWithComments();
         List<Comment> comments = commentRepository.getAll();
         if (!comments.isEmpty()) {
-            TableModel model = getTableModel(comments);
+            TableModel model = getTableModelList(comments);
             TableBuilder tableBuilder = new TableBuilder(model);
             tableBuilder.addInnerBorder(BorderStyle.fancy_light);
             tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            System.out.print(tableBuilder.build().render(160));
+            out.print(tableBuilder.build().render(160));
         }
     }
 
@@ -89,11 +89,11 @@ public class LibraryCommands {
     public void bookList() {
         List<Book> books = bookRepository.getAll();
         if (!books.isEmpty()) {
-            TableModel model = getTableModel(books);
+            TableModel model = getTableModelList(books);
             TableBuilder tableBuilder = new TableBuilder(model);
             tableBuilder.addInnerBorder(BorderStyle.fancy_light);
             tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            System.out.print(tableBuilder.build().render(160));
+            out.print(tableBuilder.build().render(160));
         }
     }
 

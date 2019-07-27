@@ -2,15 +2,10 @@ package ru.otus.spring.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import ru.otus.spring.domain.Author;
 import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Comment;
-import ru.otus.spring.domain.Genre;
-import ru.otus.spring.repositories.AuthorRepository;
 import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.CommentRepository;
-import ru.otus.spring.repositories.GenreRepository;
 
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
@@ -18,7 +13,7 @@ import java.util.Scanner;
 
 @Service
 @RequiredArgsConstructor
-public class NewCommentServiceImpl implements NewCommentService{
+public class NewCommentServiceImpl implements NewCommentService {
 
     private static final String ENTER_BOOK_ID = "Enter book id:\n";
     private static final String WRONG_BOOK_S_ID = "Wrong book's id!\n";
@@ -32,7 +27,6 @@ public class NewCommentServiceImpl implements NewCommentService{
     private Scanner in;
 
     @Override
-    @Transactional
     public void newComment(Scanner in, PrintStream out) {
         this.in = in;
         this.out = out;
@@ -58,13 +52,13 @@ public class NewCommentServiceImpl implements NewCommentService{
         }
     }
 
-    private Book readBook(){
+    private Book readBook() {
         Book book;
         while (true) {
             out.print(ENTER_BOOK_ID);
             String tmp = in.nextLine();
             if (tmp.matches("[\\d]+")) {
-                long id = Long.valueOf(tmp);
+                long id = Long.parseLong(tmp);
                 try {
                     book = bookRepository.getById(id).get();
                     break;

@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class TableHelper {
 
-    public static <T> TableModel getTableModel(List<T> objects) {
+    public static <T> TableModel getTableModelList(List<T> objects) {
         ObjectMapper objectMapper = new ObjectMapper();
         Map<String, Object> map = objectMapper.convertValue(objects.get(0), new TypeReference<Map<String, Object>>() {
         });
@@ -54,4 +54,19 @@ public class TableHelper {
         }
         return new ArrayTableModel(data);
     }
+
+    public static <T> TableModel getTableModelBean(T object) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Map<String, Object> map = objectMapper.convertValue(object, new TypeReference<Map<String, Object>>() {
+        });
+        Object[][] data = new Object[map.size()][2];
+        int j = 0;
+        for (Map.Entry entry : map.entrySet()) {
+            data[j][0] = entry.getKey();
+            data[j][1] = entry.getValue();
+            j += 1;
+        }
+        return new ArrayTableModel(data);
+    }
+
 }

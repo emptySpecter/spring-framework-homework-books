@@ -1,5 +1,8 @@
 package ru.otus.spring.service;
 
+import org.springframework.shell.table.BorderStyle;
+import org.springframework.shell.table.TableBuilder;
+import org.springframework.shell.table.TableModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.otus.spring.domain.Author;
@@ -12,6 +15,8 @@ import ru.otus.spring.repositories.GenreRepository;
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+
+import static ru.otus.spring.shell.TableHelper.getTableModelBean;
 
 @Service
 public class NewBookServiceImpl implements NewBookService {
@@ -54,19 +59,16 @@ public class NewBookServiceImpl implements NewBookService {
         book.setAuthor(readAuthor());
         book.setGenre(readGenre());
 
-        out.print("\nYou entered: \n\n");
-        out.print("Book title: " + book.getName() + "\n");
-        out.print("Number of pages: " + book.getPagecount() + "\n");
-        out.print("Number of points: " + book.getPoints() + "\n");
-        out.print("Author name and surname: " + book.getAuthor().getName() + " " + book.getAuthor().getSurname() + "\n");
-        out.print("Genre: " + book.getGenre().getName() + "\n");
+        out.print("\nYou are going to add new book: \n\n");
+        TableModel model = getTableModelBean(book);
+        TableBuilder tableBuilder = new TableBuilder(model);
+        tableBuilder.addFullBorder(BorderStyle.fancy_light);
+        out.print(tableBuilder.build().render(80));
         out.print("\nWould you like to add this book to DB? [Y,N]:\n");
         String confirmation = in.nextLine();
         if (confirmation.equals("Y")) {
             bookRepository.save(book);
         }
-
-
     }
 
     private String readBookName() {

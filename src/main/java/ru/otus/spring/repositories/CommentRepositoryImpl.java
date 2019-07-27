@@ -17,6 +17,7 @@ public class CommentRepositoryImpl implements CommentRepository {
 
 
     @Override
+    @Transactional
     public void save(Comment comment) {
         if (comment.getId() <= 0) em.persist(comment);
         else em.merge(comment);
