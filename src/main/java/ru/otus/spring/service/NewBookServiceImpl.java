@@ -22,7 +22,7 @@ import static ru.otus.spring.shell.TableHelper.getTableModelBean;
 public class NewBookServiceImpl implements NewBookService {
 
     private static final String ENTER_BOOK_TITLE = "Enter book title:\n";
-    private static final String TITLE_MUST_LESS_THAN_256_SYMBOLS = "Length of book title must less than 256 symbols!\n";
+    private static final String TITLE_MUST_LESS_THAN_256_SYMBOLS = "Length of book title must be less than 256 symbols!\n";
     private static final String ENTER_NUMBER_OF_PAGES = "Enter number of pages:\n";
     private static final String COUNT_MUST_BE_AN_INTEGER_NUMBER = "Page count must be an integer number!\n";
     private static final String ENTER_NUMBER_OF_POINTS = "Enter number of points:\n";

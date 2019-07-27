@@ -5,13 +5,11 @@ import org.jline.terminal.Terminal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.BorderStyle;
 import org.springframework.shell.table.TableBuilder;
 import org.springframework.shell.table.TableModel;
-import ru.otus.spring.domain.Author;
-import ru.otus.spring.domain.Book;
-import ru.otus.spring.domain.Comment;
-import ru.otus.spring.domain.Genre;
+import ru.otus.spring.domain.*;
 import ru.otus.spring.repositories.AuthorRepository;
 import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.CommentRepository;
@@ -24,6 +22,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Scanner;
 
+import static ru.otus.spring.shell.TableHelper.getTableModelBean;
 import static ru.otus.spring.shell.TableHelper.getTableModelList;
 
 @RequiredArgsConstructor
@@ -71,17 +70,36 @@ public class LibraryCommands {
     }
 
 
-    @ShellMethod(value = "Display list of comments", key = {"cl", "comments"})
-    public void commentsList() {
-//        BookWithComments book = bookRepository.getByIdWithComments(1).get();
-//        List<BookWithComments> books = bookRepository.getAllWithComments();
-        List<Comment> comments = commentRepository.getAll();
-        if (!comments.isEmpty()) {
-            TableModel model = getTableModelList(comments);
-            TableBuilder tableBuilder = new TableBuilder(model);
-            tableBuilder.addInnerBorder(BorderStyle.fancy_light);
-            tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            out.print(tableBuilder.build().render(160));
+    @ShellMethod(value = "Display list of comments for book with id (for all books if id=0)", key = {"cl", "comments"})
+    public void commentsList(@ShellOption(value = {"-id"}, defaultValue = "0") long id) {
+        if (id == 0) {
+            List<BookWithComments> books = bookRepository.getAllWithComments();
+            if (!books.isEmpty()) {
+                TableModel model = getTableModelList(books);
+                TableBuilder tableBuilder = new TableBuilder(model);
+                tableBuilder.addInnerBorder(BorderStyle.fancy_light);
+                tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
+                out.print(tableBuilder.build().render(160));
+            }
+        } else {
+            TableBuilder tableBuilder;
+            TableModel model;
+            BookWithComments book = bookRepository.getByIdWithComments(id).get();
+            List<Comment> comments = book.getComments();
+            if (comments.size() > 0) {
+                out.println("Comments;");
+                model = getTableModelList(comments);
+                tableBuilder = new TableBuilder(model);
+                tableBuilder.addFullBorder(BorderStyle.fancy_light);
+                out.print(tableBuilder.build().render(80));
+            } else {
+                out.print("No comments ");
+            }
+            out.println("for the book:");
+            model = getTableModelBean(book.getBook());
+            tableBuilder = new TableBuilder(model);
+            tableBuilder.addFullBorder(BorderStyle.fancy_light);
+            out.print(tableBuilder.build().render(80));
         }
     }
 
