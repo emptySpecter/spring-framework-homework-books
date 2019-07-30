@@ -4,34 +4,33 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.context.annotation.Import;
 import ru.otus.spring.domain.Genre;
-import ru.otus.spring.repositories.GenreRepositoryImpl;
+import ru.otus.spring.repositories.GenreRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 @DisplayName("Репозиторий для работы с жанрами ")
 @DataJpaTest
-@Import(GenreRepositoryImpl.class)
-public class GenreRepositoryImplTest {
+public class GenreRepositoryTest {
 
     @Autowired
-    private GenreRepositoryImpl repository;
+    private GenreRepository repository;
 
     @DisplayName("должен загружать список всех жанрoв")
     @Test
     public void shouldReturnCorrectGenresList() {
-        List<Genre> genres = repository.getAll();
+        List<Genre> genres = repository.findAll();
         assertThat(genres).isNotNull().hasSize(18).allMatch(a -> !a.getName().equals(""));
     }
 
     @DisplayName("должен загружать жанр с заданным id")
     @Test
     public void shouldReturnCorrectGenreById() {
-        Optional<Genre> optional = repository.getById(1);
+        Optional<Genre> optional = repository.findById(1L);
         assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
                 .hasFieldOrPropertyWithValue("name", "Science fiction");
     }
