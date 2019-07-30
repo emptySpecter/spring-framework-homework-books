@@ -134,9 +134,9 @@ public class NewBookServiceImpl implements NewBookService {
             out.print(ENTER_GENRE_ID);
             String tmp = in.nextLine();
             if (tmp.matches("[\\d]+")) {
-                int id = Integer.valueOf(tmp);
+                long id = Long.valueOf(tmp);
                 try {
-                    genre = genreRepository.getById(id).get();
+                    genre = genreRepository.findById(id).get();
                     break;
                 } catch (NoSuchElementException e) {
                 }

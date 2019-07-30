@@ -11,7 +11,7 @@ import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Genre;
 import ru.otus.spring.repositories.AuthorRepositoryImpl;
 import ru.otus.spring.repositories.BookRepositoryImpl;
-import ru.otus.spring.repositories.GenreRepositoryImpl;
+import ru.otus.spring.repositories.GenreRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Репозиторий для работы с книгами")
 @DataJpaTest
-@Import({BookRepositoryImpl.class, AuthorRepositoryImpl.class, GenreRepositoryImpl.class})
+@Import({BookRepositoryImpl.class, AuthorRepositoryImpl.class, GenreRepository.class})
 //@Transactional(propagation = Propagation.NOT_SUPPORTED)
 public class BookRepositoryImplTest {
 
@@ -35,7 +35,7 @@ public class BookRepositoryImplTest {
     private AuthorRepositoryImpl authorRepository;
 
     @Autowired
-    private GenreRepositoryImpl genreRepository;
+    private GenreRepository genreRepository;
 
     @DisplayName("должен загружать список всех книг")
     @Test
@@ -60,7 +60,7 @@ public class BookRepositoryImplTest {
         final long pagecount = 15;
         final long points = 10;
         final String bookName = "Book";
-        Genre genre = genreRepository.getById(2).get();
+        Genre genre = genreRepository.findById(2L).get();
         // if I create just a new genre and author then persist dosen't work at all!
         Author author = authorRepository.getById(3).get();
         Book expectedBook = new Book(bookId, bookName, pagecount, points, genre, author);

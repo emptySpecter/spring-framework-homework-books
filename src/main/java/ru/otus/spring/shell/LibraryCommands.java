@@ -59,7 +59,7 @@ public class LibraryCommands {
 
     @ShellMethod(value = "Display list of genres", key = {"gl", "genres"})
     public void genresList() {
-        List<Genre> genres = genreRepository.getAll();
+        List<Genre> genres = genreRepository.findAll();
         if (!genres.isEmpty()) {
             TableModel model = getTableModelList(genres);
             TableBuilder tableBuilder = new TableBuilder(model);
