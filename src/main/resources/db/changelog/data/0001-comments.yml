@@ -5,7 +5,7 @@ databaseChangeLog:
       context: test
       runOnChange: true
       loadUpdateData:
-        primaryKey: commentId
+        primaryKey: comment_id
         file: data/comments.csv
         relativeToChangelogFile: true
         separator: ;

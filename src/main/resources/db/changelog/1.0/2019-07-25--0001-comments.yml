@@ -6,19 +6,19 @@ databaseChangeLog:
         tableName: comments
         columns:
           - column:
-              name: commentId
+              name: comment_id
               type: bigint
               autoIncrement: true
               constraints:
                 nullable: false
                 primaryKey: true
           - column:
-              name: bookId
+              name: book_id
               type: bigint
               constraints:
                 nullable: false
                 foreignKeyName: fk_book_comments
-                references: books(bookId)
+                references: books(book_id)
           - column:
               name: text
               type: varchar(256)

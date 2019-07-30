@@ -13,15 +13,15 @@ import java.util.List;
 public class BookWithComments {
 
     @Id
-    @Column(name = "bookid", nullable = false, unique = true)
+    @Column(name = "book_id", nullable = false, unique = true)
     private long id;
 
     @OneToOne(targetEntity = Book.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "bookid")
+    @JoinColumn(name = "book_id")
     private Book book;
 
     @OneToMany(targetEntity = Comment.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "bookid")
+    @JoinColumn(name = "book_id")
     private List<Comment> comments;
 
 }

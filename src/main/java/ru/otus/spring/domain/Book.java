@@ -14,18 +14,18 @@ import javax.persistence.*;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bookid", nullable = false, unique = true)
+    @Column(name = "book_id", nullable = false, unique = true)
     private long id;
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "pagecount", nullable = false)
+    @Column(name = "page_count", nullable = false)
     private long pagecount;
     @Column(name = "points", nullable = false)
     private long points;
     @ManyToOne(targetEntity = Genre.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "typeid")
+    @JoinColumn(name = "type_id")
     private Genre genre;
     @ManyToOne(targetEntity = Author.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "authorid")
+    @JoinColumn(name = "author_id")
     private Author author;
 }

@@ -14,10 +14,10 @@ import javax.persistence.*;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "commentid", nullable = false, unique = true)
+    @Column(name = "comment_id", nullable = false, unique = true)
     private long id;
     @Column(name = "text", nullable = false)
     private String text;
-    @Column(name = "bookid", nullable = false)
+    @Column(name = "book_id", nullable = false)
     private long bookId;
 }
