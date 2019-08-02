@@ -5,6 +5,7 @@ import org.springframework.shell.table.BorderStyle;
 import org.springframework.shell.table.TableBuilder;
 import org.springframework.shell.table.TableModel;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Comment;
 import ru.otus.spring.repositories.BookRepository;
@@ -32,6 +33,7 @@ public class NewCommentServiceImpl implements NewCommentService {
     private Scanner in;
 
     @Override
+    @Transactional
     public void newComment(Scanner in, PrintStream out) {
         this.in = in;
         this.out = out;
@@ -65,7 +67,7 @@ public class NewCommentServiceImpl implements NewCommentService {
             if (tmp.matches("[\\d]+")) {
                 long id = Long.parseLong(tmp);
                 try {
-                    book = bookRepository.getById(id).get();
+                    book = bookRepository.findById(id).get();
                     break;
                 } catch (NoSuchElementException e) {
                 }

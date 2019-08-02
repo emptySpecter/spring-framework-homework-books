@@ -116,9 +116,9 @@ public class NewBookServiceImpl implements NewBookService {
             out.print(ENTER_AUTHOR_ID);
             String tmp = in.nextLine();
             if (tmp.matches("[\\d]+")) {
-                int id = Integer.valueOf(tmp);
+                long id = Long.valueOf(tmp);
                 try {
-                    author = authorRepository.getById(id).get();
+                    author = authorRepository.findById(id).get();
                     break;
                 } catch (NoSuchElementException e) {
                 }

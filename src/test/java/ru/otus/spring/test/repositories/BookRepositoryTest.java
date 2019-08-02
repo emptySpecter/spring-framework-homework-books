@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.context.annotation.Import;
 import ru.otus.spring.domain.Author;
 import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Genre;
-import ru.otus.spring.repositories.AuthorRepositoryImpl;
-import ru.otus.spring.repositories.BookRepositoryImpl;
+import ru.otus.spring.repositories.AuthorRepository;
+import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.GenreRepository;
 
 import java.util.List;
@@ -21,18 +20,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Репозиторий для работы с книгами")
 @DataJpaTest
-@Import({BookRepositoryImpl.class, AuthorRepositoryImpl.class, GenreRepository.class})
 //@Transactional(propagation = Propagation.NOT_SUPPORTED)
-public class BookRepositoryImplTest {
+public class BookRepositoryTest {
 
     @Autowired
     private TestEntityManager em;
 
     @Autowired
-    private BookRepositoryImpl bookRepository;
+    private BookRepository bookRepository;
 
     @Autowired
-    private AuthorRepositoryImpl authorRepository;
+    private AuthorRepository authorRepository;
 
     @Autowired
     private GenreRepository genreRepository;
@@ -40,7 +38,7 @@ public class BookRepositoryImplTest {
     @DisplayName("должен загружать список всех книг")
     @Test
     public void shouldReturnCorrectBookList() {
-        List<Book> books = bookRepository.getAll();
+        List<Book> books = bookRepository.findAll();
         assertThat(books).isNotNull().hasSize(168).allMatch(b -> !b.getName().equals(""))
                 .noneMatch(b -> b.getAuthor() == null).noneMatch(b -> b.getGenre() == null);
     }
@@ -48,7 +46,7 @@ public class BookRepositoryImplTest {
     @DisplayName("должен загружать книгу с заданным id")
     @Test
     public void shouldReturnCorrectBookById() {
-        Optional<Book> optional = bookRepository.getById(1);
+        Optional<Book> optional = bookRepository.findById(1L);
         assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
                 .hasFieldOrPropertyWithValue("name", "A Daughter of the Snows");
     }
@@ -62,10 +60,10 @@ public class BookRepositoryImplTest {
         final String bookName = "Book";
         Genre genre = genreRepository.findById(2L).get();
         // if I create just a new genre and author then persist dosen't work at all!
-        Author author = authorRepository.getById(3).get();
+        Author author = authorRepository.findById(3L).get();
         Book expectedBook = new Book(bookId, bookName, pagecount, points, genre, author);
         long newId = (long) em.persistAndGetId(expectedBook);
-        Book actuallBook = bookRepository.getById(newId).get();
+        Book actuallBook = bookRepository.findById(newId).get();
         assertThat(actuallBook.getId()).isNotNull();
         assertEquals(expectedBook.getName(), actuallBook.getName());
     }
