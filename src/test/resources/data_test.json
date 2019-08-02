@@ -1,0 +1,3014 @@
+[
+  {
+    "id": 1,
+    "name": "William Dean",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Howells"
+  },
+  {
+    "id": 2,
+    "name": "Frederic",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Brown"
+  },
+  {
+    "id": 3,
+    "name": "Jack",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "London"
+  },
+  {
+    "id": 4,
+    "name": "Albert",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Blaisdell"
+  },
+  {
+    "id": 5,
+    "name": "Ellis",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Butler"
+  },
+  {
+    "id": 6,
+    "name": "Arthur",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Machen"
+  },
+  {
+    "id": 7,
+    "name": "Titus",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Lucretius"
+  },
+  {
+    "id": 8,
+    "name": "Rabindranath",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Tagore"
+  },
+  {
+    "id": 9,
+    "name": "Isaac",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Asimov"
+  },
+  {
+    "id": 10,
+    "name": "Charles",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Dickens"
+  },
+  {
+    "id": 11,
+    "name": "Ralph Waldo",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Emerso"
+  },
+  {
+    "id": 12,
+    "name": "Dorothy",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Canfield"
+  },
+  {
+    "id": 13,
+    "name": "Givoanni",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Boccaccio"
+  },
+  {
+    "id": 14,
+    "name": "George",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Orwell"
+  },
+  {
+    "id": 15,
+    "name": "Publius",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Ovid"
+  },
+  {
+    "id": 16,
+    "name": "Robert Louis",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Stevenson"
+  },
+  {
+    "id": 17,
+    "name": "Virginia",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Woolf"
+  },
+  {
+    "id": 18,
+    "name": "George",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Eliot"
+  },
+  {
+    "id": 19,
+    "name": "Amelia B.",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Edwards"
+  },
+  {
+    "id": 20,
+    "name": "Fyodor",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Dostoevsky"
+  },
+  {
+    "id": 21,
+    "name": "Emily",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Dickinson"
+  },
+  {
+    "id": 22,
+    "name": "Edna",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Ferber"
+  },
+  {
+    "id": 23,
+    "name": "Joseph Sheridan",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "LeFanu"
+  },
+  {
+    "id": 24,
+    "name": "John",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "DosPassos"
+  },
+  {
+    "id": 25,
+    "name": "Ruth",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Stuart"
+  },
+  {
+    "id": 26,
+    "name": "Vladimir",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Nabokov"
+  },
+  {
+    "id": 27,
+    "name": "Johanna",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Spyri"
+  },
+  {
+    "id": 28,
+    "name": "Ernest",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Dowson"
+  },
+  {
+    "id": 29,
+    "name": "Mary Hallock",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Foote"
+  },
+  {
+    "id": 30,
+    "name": "Zane",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Grey"
+  },
+  {
+    "id": 31,
+    "name": "H. P.",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Lovecraft"
+  },
+  {
+    "id": 32,
+    "name": "Samuel",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Pepys"
+  },
+  {
+    "id": 33,
+    "name": "Kate Dickinso",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Sweetser"
+  },
+  {
+    "id": 34,
+    "name": "William",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Lampto"
+  },
+  {
+    "id": 35,
+    "name": "Mother",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Goose"
+  },
+  {
+    "id": 36,
+    "name": "Eleanor Hallowell",
+    "_class": "ru.otus.spring.domain.Author",
+    "surname": "Abbott"
+  },
+  {
+    "id": 1,
+    "name": "Science fiction",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 2,
+    "name": "Satire",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 3,
+    "name": "Drama",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 4,
+    "name": "Action and Adventure",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 5,
+    "name": "Romance",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 6,
+    "name": "Mystery",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 7,
+    "name": "Horror",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 8,
+    "name": "Health",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 9,
+    "name": "Guide",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 10,
+    "name": "Diaries",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 11,
+    "name": "Comics",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 12,
+    "name": "Diaries",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 13,
+    "name": "Journals",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 14,
+    "name": "Biographies",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 15,
+    "name": "Fantasy",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 16,
+    "name": "History",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 17,
+    "name": "Science",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 18,
+    "name": "Art",
+    "_class": "ru.otus.spring.domain.Genre"
+  },
+  {
+    "id": 1,
+    "name": "A Daughter of the Snows",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 84,
+    "pagecount": 199
+  },
+  {
+    "id": 2,
+    "name": "The Near East: 10,000 Years of History",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 52,
+    "pagecount": 298
+  },
+  {
+    "id": 3,
+    "name": "The Cocoon: A Rest-Cure Comedy",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 25,
+      "name": "Ruth",
+      "surname": "Stuart"
+    },
+    "points": 26,
+    "pagecount": 90
+  },
+  {
+    "id": 4,
+    "name": "The Freakshow Murders",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 2,
+      "name": "Frederic",
+      "surname": "Brown"
+    },
+    "points": 41,
+    "pagecount": 321
+  },
+  {
+    "id": 5,
+    "name": "Pharaohs, Fellahs and Explorers",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 19,
+      "name": "Amelia B.",
+      "surname": "Edwards"
+    },
+    "points": 56,
+    "pagecount": 367
+  },
+  {
+    "id": 6,
+    "name": "Hard Times",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 25,
+    "pagecount": 293
+  },
+  {
+    "id": 7,
+    "name": "A Modern Instance",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 73,
+    "pagecount": 222
+  },
+  {
+    "id": 8,
+    "name": "The Real Mother Goose",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 35,
+      "name": "Mother",
+      "surname": "Goose"
+    },
+    "points": 99,
+    "pagecount": 88
+  },
+  {
+    "id": 9,
+    "name": "A Thousand Miles Up the Nile",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 19,
+      "name": "Amelia B.",
+      "surname": "Edwards"
+    },
+    "points": 90,
+    "pagecount": 110
+  },
+  {
+    "id": 10,
+    "name": "Children of Blood and Bone",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 7,
+      "name": "Titus",
+      "surname": "Lucretius"
+    },
+    "points": 83,
+    "pagecount": 137
+  },
+  {
+    "id": 11,
+    "name": "A pushcart at the curb",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 24,
+      "name": "John",
+      "surname": "DosPassos"
+    },
+    "points": 55,
+    "pagecount": 95
+  },
+  {
+    "id": 12,
+    "name": "The Desert and the Sown",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 29,
+      "name": "Mary Hallock",
+      "surname": "Foote"
+    },
+    "points": 35,
+    "pagecount": 126
+  },
+  {
+    "id": 13,
+    "name": "Three Soldiers",
+    "genre": {
+      "id": 16,
+      "name": "History"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 24,
+      "name": "John",
+      "surname": "DosPassos"
+    },
+    "points": 92,
+    "pagecount": 223
+  },
+  {
+    "id": 14,
+    "name": "The End of Eternity",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 42,
+    "pagecount": 168
+  },
+  {
+    "id": 15,
+    "name": "Annie Kilbur",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 51,
+    "pagecount": 291
+  },
+  {
+    "id": 16,
+    "name": "A Touch of Sun and Other Stories",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 29,
+      "name": "Mary Hallock",
+      "surname": "Foote"
+    },
+    "points": 69,
+    "pagecount": 141
+  },
+  {
+    "id": 17,
+    "name": "Show Boat",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 22,
+      "name": "Edna",
+      "surname": "Ferber"
+    },
+    "points": 26,
+    "pagecount": 151
+  },
+  {
+    "id": 18,
+    "name": "The Call of the Wild",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 49,
+    "pagecount": 362
+  },
+  {
+    "id": 19,
+    "name": "My Mark Twain",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 64,
+    "pagecount": 339
+  },
+  {
+    "id": 20,
+    "name": "Broken Ties",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 56,
+    "pagecount": 134
+  },
+  {
+    "id": 21,
+    "name": "Short Stories From American History",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 4,
+      "name": "Albert",
+      "surname": "Blaisdell"
+    },
+    "points": 89,
+    "pagecount": 305
+  },
+  {
+    "id": 22,
+    "name": "Mrs Rosie and the Priest",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 13,
+      "name": "Givoanni",
+      "surname": "Boccaccio"
+    },
+    "points": 30,
+    "pagecount": 104
+  },
+  {
+    "id": 23,
+    "name": "So Big",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 22,
+      "name": "Edna",
+      "surname": "Ferber"
+    },
+    "points": 57,
+    "pagecount": 209
+  },
+  {
+    "id": 24,
+    "name": "Monsieur Maurice ",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 19,
+      "name": "Amelia B.",
+      "surname": "Edwards"
+    },
+    "points": 61,
+    "pagecount": 92
+  },
+  {
+    "id": 25,
+    "name": "The Master of Ballantraen",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 16,
+      "name": "Robert Louis",
+      "surname": "Stevenson"
+    },
+    "points": 66,
+    "pagecount": 236
+  },
+  {
+    "id": 26,
+    "name": "The Unlived Life of Little Mary Ellen",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 25,
+      "name": "Ruth",
+      "surname": "Stuart"
+    },
+    "points": 45,
+    "pagecount": 99
+  },
+  {
+    "id": 27,
+    "name": "Mouse - The Last Train",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 2,
+      "name": "Frederic",
+      "surname": "Brown"
+    },
+    "points": 43,
+    "pagecount": 184
+  },
+  {
+    "id": 28,
+    "name": "Edith Bonham",
+    "genre": {
+      "id": 7,
+      "name": "Horror"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 29,
+      "name": "Mary Hallock",
+      "surname": "Foote"
+    },
+    "points": 74,
+    "pagecount": 122
+  },
+  {
+    "id": 29,
+    "name": "Maybe Mother Goose",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 35,
+      "name": "Mother",
+      "surname": "Goose"
+    },
+    "points": 98,
+    "pagecount": 161
+  },
+  {
+    "id": 30,
+    "name": "The Noble Gases",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 33,
+    "pagecount": 321
+  },
+  {
+    "id": 31,
+    "name": "Rainy Week",
+    "genre": {
+      "id": 7,
+      "name": "Horror"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 32,
+    "pagecount": 98
+  },
+  {
+    "id": 32,
+    "name": "A Hazard of New Fortunes",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 92,
+    "pagecount": 144
+  },
+  {
+    "id": 33,
+    "name": "A Plot for Murder",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 2,
+      "name": "Frederic",
+      "surname": "Brown"
+    },
+    "points": 45,
+    "pagecount": 108
+  },
+  {
+    "id": 34,
+    "name": "Nature",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 11,
+      "name": "Ralph Waldo",
+      "surname": "Emerso"
+    },
+    "points": 59,
+    "pagecount": 357
+  },
+  {
+    "id": 35,
+    "name": "Hickory Dickory Dock",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 35,
+      "name": "Mother",
+      "surname": "Goose"
+    },
+    "points": 91,
+    "pagecount": 326
+  },
+  {
+    "id": 36,
+    "name": "Big Fat He",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 35,
+      "name": "Mother",
+      "surname": "Goose"
+    },
+    "points": 28,
+    "pagecount": 232
+  },
+  {
+    "id": 37,
+    "name": "The Lone Star Ranger",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 30,
+      "name": "Zane",
+      "surname": "Grey"
+    },
+    "points": 77,
+    "pagecount": 328
+  },
+  {
+    "id": 38,
+    "name": "The Great Fire of London",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 32,
+      "name": "Samuel",
+      "surname": "Pepys"
+    },
+    "points": 69,
+    "pagecount": 252
+  },
+  {
+    "id": 39,
+    "name": "White Nights",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 77,
+    "pagecount": 265
+  },
+  {
+    "id": 40,
+    "name": "In a Glass Darkly",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 23,
+      "name": "Joseph Sheridan",
+      "surname": "LeFanu"
+    },
+    "points": 62,
+    "pagecount": 173
+  },
+  {
+    "id": 41,
+    "name": "Fanny herself",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 22,
+      "name": "Edna",
+      "surname": "Ferber"
+    },
+    "points": 81,
+    "pagecount": 248
+  },
+  {
+    "id": 42,
+    "name": "Loaded",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 2,
+      "name": "Frederic",
+      "surname": "Brown"
+    },
+    "points": 29,
+    "pagecount": 273
+  },
+  {
+    "id": 43,
+    "name": "A Foregone Conclusion",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 35,
+    "pagecount": 121
+  },
+  {
+    "id": 44,
+    "name": "The Hill of Dreams",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 6,
+      "name": "Arthur",
+      "surname": "Machen"
+    },
+    "points": 82,
+    "pagecount": 175
+  },
+  {
+    "id": 45,
+    "name": "Adventure",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 60,
+    "pagecount": 217
+  },
+  {
+    "id": 46,
+    "name": "A Tagore Reader",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 40,
+    "pagecount": 285
+  },
+  {
+    "id": 47,
+    "name": "A Tale of Two Cities",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 44,
+    "pagecount": 331
+  },
+  {
+    "id": 48,
+    "name": "Dombey and Son",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 87,
+    "pagecount": 344
+  },
+  {
+    "id": 49,
+    "name": "Famous Women",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 13,
+      "name": "Givoanni",
+      "surname": "Boccaccio"
+    },
+    "points": 32,
+    "pagecount": 273
+  },
+  {
+    "id": 50,
+    "name": "Rejection, The Ruling Spirit",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 5,
+      "name": "Ellis",
+      "surname": "Butler"
+    },
+    "points": 86,
+    "pagecount": 358
+  },
+  {
+    "id": 51,
+    "name": "Little Dorrit",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 43,
+    "pagecount": 314
+  },
+  {
+    "id": 52,
+    "name": "The Four-Fifteen Express",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 19,
+      "name": "Amelia B.",
+      "surname": "Edwards"
+    },
+    "points": 85,
+    "pagecount": 201
+  },
+  {
+    "id": 53,
+    "name": "Fairy Prince and Other Stories",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 90,
+    "pagecount": 306
+  },
+  {
+    "id": 54,
+    "name": "Ten Tales from the Decameron",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 13,
+      "name": "Givoanni",
+      "surname": "Boccaccio"
+    },
+    "points": 92,
+    "pagecount": 183
+  },
+  {
+    "id": 55,
+    "name": "The Double",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 86,
+    "pagecount": 372
+  },
+  {
+    "id": 56,
+    "name": "A Flight Of Swans",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 64,
+    "pagecount": 115
+  },
+  {
+    "id": 57,
+    "name": "The Phantom Coach",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 19,
+      "name": "Amelia B.",
+      "surname": "Edwards"
+    },
+    "points": 28,
+    "pagecount": 243
+  },
+  {
+    "id": 58,
+    "name": "The Game",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 52,
+    "pagecount": 209
+  },
+  {
+    "id": 59,
+    "name": "Rico and Wiselin",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 27,
+      "name": "Johanna",
+      "surname": "Spyri"
+    },
+    "points": 53,
+    "pagecount": 309
+  },
+  {
+    "id": 60,
+    "name": "The Shorter Pepys",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 32,
+      "name": "Samuel",
+      "surname": "Pepys"
+    },
+    "points": 64,
+    "pagecount": 276
+  },
+  {
+    "id": 61,
+    "name": "My Life Had Stood a Loaded Gun ",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 21,
+      "name": "Emily",
+      "surname": "Dickinson"
+    },
+    "points": 82,
+    "pagecount": 278
+  },
+  {
+    "id": 62,
+    "name": "A Tagore Testament",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 56,
+    "pagecount": 268
+  },
+  {
+    "id": 63,
+    "name": "The Cruise of the Dazzler",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 25,
+    "pagecount": 140
+  },
+  {
+    "id": 64,
+    "name": "To the Lighthouse",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 17,
+      "name": "Virginia",
+      "surname": "Woolf"
+    },
+    "points": 87,
+    "pagecount": 90
+  },
+  {
+    "id": 65,
+    "name": "The Terror",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 6,
+      "name": "Arthur",
+      "surname": "Machen"
+    },
+    "points": 101,
+    "pagecount": 293
+  },
+  {
+    "id": 66,
+    "name": "The Sick-a-Bed Lady",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 79,
+    "pagecount": 369
+  },
+  {
+    "id": 67,
+    "name": "Christmas Every Day",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 59,
+    "pagecount": 98
+  },
+  {
+    "id": 68,
+    "name": "The home-maker",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 12,
+      "name": "Dorothy",
+      "surname": "Canfield"
+    },
+    "points": 25,
+    "pagecount": 316
+  },
+  {
+    "id": 69,
+    "name": "The Ground-Swell",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 29,
+      "name": "Mary Hallock",
+      "surname": "Foote"
+    },
+    "points": 55,
+    "pagecount": 193
+  },
+  {
+    "id": 70,
+    "name": "A Sleep and a Forgetting",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 44,
+    "pagecount": 360
+  },
+  {
+    "id": 71,
+    "name": "Nicholas Nickleby",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 97,
+    "pagecount": 219
+  },
+  {
+    "id": 72,
+    "name": "The Whole Family: A Novel by Twelve Authors",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 65,
+    "pagecount": 149
+  },
+  {
+    "id": 73,
+    "name": "Middlemarch",
+    "genre": {
+      "id": 11,
+      "name": "Comics"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 18,
+      "name": "George",
+      "surname": "Eliot"
+    },
+    "points": 69,
+    "pagecount": 288
+  },
+  {
+    "id": 74,
+    "name": "Life of Dante",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 13,
+      "name": "Givoanni",
+      "surname": "Boccaccio"
+    },
+    "points": 44,
+    "pagecount": 156
+  },
+  {
+    "id": 75,
+    "name": "Short Stories From English History",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 4,
+      "name": "Albert",
+      "surname": "Blaisdell"
+    },
+    "points": 69,
+    "pagecount": 189
+  },
+  {
+    "id": 76,
+    "name": "Little Eve Edgarton",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 41,
+    "pagecount": 306
+  },
+  {
+    "id": 77,
+    "name": "The Kingdom of the Sun",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 68,
+    "pagecount": 189
+  },
+  {
+    "id": 78,
+    "name": "Indian Summer",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 21,
+    "pagecount": 107
+  },
+  {
+    "id": 79,
+    "name": "Mrs Dalloway",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 17,
+      "name": "Virginia",
+      "surname": "Woolf"
+    },
+    "points": 68,
+    "pagecount": 321
+  },
+  {
+    "id": 80,
+    "name": "Demons",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 88,
+    "pagecount": 232
+  },
+  {
+    "id": 81,
+    "name": "The Last Trail",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 30,
+      "name": "Zane",
+      "surname": "Grey"
+    },
+    "points": 64,
+    "pagecount": 116
+  },
+  {
+    "id": 82,
+    "name": "The Fredric Brown Megapack",
+    "genre": {
+      "id": 16,
+      "name": "History"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 2,
+      "name": "Frederic",
+      "surname": "Brown"
+    },
+    "points": 89,
+    "pagecount": 324
+  },
+  {
+    "id": 83,
+    "name": "The Decameron: Selected Tales",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 13,
+      "name": "Givoanni",
+      "surname": "Boccaccio"
+    },
+    "points": 34,
+    "pagecount": 337
+  },
+  {
+    "id": 84,
+    "name": "Th bent twig",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 12,
+      "name": "Dorothy",
+      "surname": "Canfield"
+    },
+    "points": 26,
+    "pagecount": 367
+  },
+  {
+    "id": 85,
+    "name": "Things near and far",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 6,
+      "name": "Arthur",
+      "surname": "Machen"
+    },
+    "points": 67,
+    "pagecount": 199
+  },
+  {
+    "id": 86,
+    "name": "The Story of Salomen",
+    "genre": {
+      "id": 11,
+      "name": "Comics"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 19,
+      "name": "Amelia B.",
+      "surname": "Edwards"
+    },
+    "points": 44,
+    "pagecount": 316
+  },
+  {
+    "id": 87,
+    "name": "The Destruction of Our Children",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 5,
+      "name": "Ellis",
+      "surname": "Butler"
+    },
+    "points": 73,
+    "pagecount": 104
+  },
+  {
+    "id": 88,
+    "name": "Collected Stories",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 100,
+    "pagecount": 295
+  },
+  {
+    "id": 89,
+    "name": "The House of the Dead",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 53,
+    "pagecount": 209
+  },
+  {
+    "id": 90,
+    "name": "Sonny: A Christmas Guest",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 25,
+      "name": "Ruth",
+      "surname": "Stuart"
+    },
+    "points": 30,
+    "pagecount": 186
+  },
+  {
+    "id": 91,
+    "name": "Amores",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 15,
+      "name": "Publius",
+      "surname": "Ovid"
+    },
+    "points": 93,
+    "pagecount": 297
+  },
+  {
+    "id": 92,
+    "name": "Chaturanga",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 34,
+    "pagecount": 218
+  },
+  {
+    "id": 93,
+    "name": "Little Eve Edgarton",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 32,
+    "pagecount": 247
+  },
+  {
+    "id": 94,
+    "name": "Chitra",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 52,
+    "pagecount": 122
+  },
+  {
+    "id": 95,
+    "name": "The Iron Heel",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 29,
+    "pagecount": 81
+  },
+  {
+    "id": 96,
+    "name": "Self Reliance",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 11,
+      "name": "Ralph Waldo",
+      "surname": "Emerso"
+    },
+    "points": 64,
+    "pagecount": 137
+  },
+  {
+    "id": 97,
+    "name": "The Great God Pan And The Hill Of Dreams",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 6,
+      "name": "Arthur",
+      "surname": "Machen"
+    },
+    "points": 87,
+    "pagecount": 158
+  },
+  {
+    "id": 98,
+    "name": "The White People and Other Weird Stories",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 6,
+      "name": "Arthur",
+      "surname": "Machen"
+    },
+    "points": 93,
+    "pagecount": 100
+  },
+  {
+    "id": 99,
+    "name": "The Diary of Samuel Pepys: A Selection",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 32,
+      "name": "Samuel",
+      "surname": "Pepys"
+    },
+    "points": 55,
+    "pagecount": 271
+  },
+  {
+    "id": 100,
+    "name": "The Rise of Silas Lapham",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 36,
+    "pagecount": 314
+  },
+  {
+    "id": 101,
+    "name": "The Mystery of Edwin Drood",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 59,
+    "pagecount": 340
+  },
+  {
+    "id": 102,
+    "name": "In Exile and Other Stories",
+    "genre": {
+      "id": 11,
+      "name": "Comics"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 29,
+      "name": "Mary Hallock",
+      "surname": "Foote"
+    },
+    "points": 97,
+    "pagecount": 140
+  },
+  {
+    "id": 103,
+    "name": "Bleak House",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 84,
+    "pagecount": 130
+  },
+  {
+    "id": 104,
+    "name": "U.S.A Trilogy",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 24,
+      "name": "John",
+      "surname": "DosPassos"
+    },
+    "points": 57,
+    "pagecount": 118
+  },
+  {
+    "id": 105,
+    "name": "A Comedy of Masks",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 28,
+      "name": "Ernest",
+      "surname": "Dowson"
+    },
+    "points": 87,
+    "pagecount": 237
+  },
+  {
+    "id": 106,
+    "name": "Barnaby Rudge",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 31,
+    "pagecount": 380
+  },
+  {
+    "id": 107,
+    "name": "Heroic Deeds of American Sailors",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 4,
+      "name": "Albert",
+      "surname": "Blaisdell"
+    },
+    "points": 21,
+    "pagecount": 243
+  },
+  {
+    "id": 108,
+    "name": "A Bouquet",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 28,
+      "name": "Ernest",
+      "surname": "Dowson"
+    },
+    "points": 89,
+    "pagecount": 309
+  },
+  {
+    "id": 109,
+    "name": "Editha",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 80,
+    "pagecount": 155
+  },
+  {
+    "id": 110,
+    "name": "Manhattan Transfer",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 24,
+      "name": "John",
+      "surname": "DosPassos"
+    },
+    "points": 21,
+    "pagecount": 124
+  },
+  {
+    "id": 111,
+    "name": "Fasti",
+    "genre": {
+      "id": 7,
+      "name": "Horror"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 15,
+      "name": "Publius",
+      "surname": "Ovid"
+    },
+    "points": 68,
+    "pagecount": 325
+  },
+  {
+    "id": 112,
+    "name": "Hearts of Three",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 28,
+    "pagecount": 272
+  },
+  {
+    "id": 113,
+    "name": "Speak, Memory",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 26,
+      "name": "Vladimir",
+      "surname": "Nabokov"
+    },
+    "points": 69,
+    "pagecount": 154
+  },
+  {
+    "id": 114,
+    "name": "Kidnapped",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 16,
+      "name": "Robert Louis",
+      "surname": "Stevenson"
+    },
+    "points": 60,
+    "pagecount": 334
+  },
+  {
+    "id": 115,
+    "name": "The Brothers Karamazov",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 74,
+    "pagecount": 161
+  },
+  {
+    "id": 116,
+    "name": "Envelope Poems",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 21,
+      "name": "Emily",
+      "surname": "Dickinson"
+    },
+    "points": 75,
+    "pagecount": 342
+  },
+  {
+    "id": 117,
+    "name": "Selected Poems",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 21,
+      "name": "Emily",
+      "surname": "Dickinson"
+    },
+    "points": 72,
+    "pagecount": 203
+  },
+  {
+    "id": 118,
+    "name": "Gobolinks or Shadow Pictures for Young and Old",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 25,
+      "name": "Ruth",
+      "surname": "Stuart"
+    },
+    "points": 61,
+    "pagecount": 332
+  },
+  {
+    "id": 119,
+    "name": "The Decamero",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 13,
+      "name": "Givoanni",
+      "surname": "Boccaccio"
+    },
+    "points": 94,
+    "pagecount": 318
+  },
+  {
+    "id": 120,
+    "name": "The Cock and Anchor",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 23,
+      "name": "Joseph Sheridan",
+      "surname": "LeFanu"
+    },
+    "points": 61,
+    "pagecount": 133
+  },
+  {
+    "id": 121,
+    "name": "Adrian Rome",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 28,
+      "name": "Ernest",
+      "surname": "Dowson"
+    },
+    "points": 89,
+    "pagecount": 259
+  },
+  {
+    "id": 122,
+    "name": "Words in Genesis",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 101,
+    "pagecount": 217
+  },
+  {
+    "id": 123,
+    "name": "Stories of Ohio",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 78,
+    "pagecount": 191
+  },
+  {
+    "id": 124,
+    "name": "Treasure Island",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 16,
+      "name": "Robert Louis",
+      "surname": "Stevenson"
+    },
+    "points": 75,
+    "pagecount": 308
+  },
+  {
+    "id": 125,
+    "name": "Uncle Silas",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 23,
+      "name": "Joseph Sheridan",
+      "surname": "LeFanu"
+    },
+    "points": 57,
+    "pagecount": 118
+  },
+  {
+    "id": 126,
+    "name": "The Idiot",
+    "genre": {
+      "id": 7,
+      "name": "Horror"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 97,
+    "pagecount": 248
+  },
+  {
+    "id": 127,
+    "name": "Inside The Atom",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 52,
+    "pagecount": 176
+  },
+  {
+    "id": 128,
+    "name": "The Story of Babette: A Little Creole Girl",
+    "genre": {
+      "id": 5,
+      "name": "Romance"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 25,
+      "name": "Ruth",
+      "surname": "Stuart"
+    },
+    "points": 76,
+    "pagecount": 313
+  },
+  {
+    "id": 129,
+    "name": "The Eternal Husband",
+    "genre": {
+      "id": 15,
+      "name": "Fantasy"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 79,
+    "pagecount": 225
+  },
+  {
+    "id": 130,
+    "name": "Heidi",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 27,
+      "name": "Johanna",
+      "surname": "Spyri"
+    },
+    "points": 67,
+    "pagecount": 146
+  },
+  {
+    "id": 131,
+    "name": "The Concise Pepys",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 32,
+      "name": "Samuel",
+      "surname": "Pepys"
+    },
+    "points": 88,
+    "pagecount": 303
+  },
+  {
+    "id": 132,
+    "name": "Tales From Shakespeare",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 4,
+      "name": "Albert",
+      "surname": "Blaisdell"
+    },
+    "points": 62,
+    "pagecount": 121
+  },
+  {
+    "id": 133,
+    "name": "Molly Make-Believe",
+    "genre": {
+      "id": 10,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 53,
+    "pagecount": 286
+  },
+  {
+    "id": 134,
+    "name": "Peace on Earth, Good Will to Dogs",
+    "genre": {
+      "id": 9,
+      "name": "Guide"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 84,
+    "pagecount": 321
+  },
+  {
+    "id": 135,
+    "name": "Miss Darkness",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 2,
+      "name": "Frederic",
+      "surname": "Brown"
+    },
+    "points": 63,
+    "pagecount": 360
+  },
+  {
+    "id": 136,
+    "name": "Poor Folk",
+    "genre": {
+      "id": 7,
+      "name": "Horror"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 101,
+    "pagecount": 202
+  },
+  {
+    "id": 137,
+    "name": "Their Wedding Journey",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 78,
+    "pagecount": 132
+  },
+  {
+    "id": 138,
+    "name": "The Elegy of Lady Fiammetta",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 13,
+      "name": "Givoanni",
+      "surname": "Boccaccio"
+    },
+    "points": 79,
+    "pagecount": 157
+  },
+  {
+    "id": 139,
+    "name": "Art Of Tagore",
+    "genre": {
+      "id": 16,
+      "name": "History"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 72,
+    "pagecount": 119
+  },
+  {
+    "id": 140,
+    "name": "Chemistry and Human Health",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 55,
+    "pagecount": 244
+  },
+  {
+    "id": 141,
+    "name": "Realm of Numbers",
+    "genre": {
+      "id": 11,
+      "name": "Comics"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 57,
+    "pagecount": 279
+  },
+  {
+    "id": 142,
+    "name": "The Kempton-Wace Letters",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 3,
+      "name": "Jack",
+      "surname": "London"
+    },
+    "points": 60,
+    "pagecount": 240
+  },
+  {
+    "id": 143,
+    "name": "Crime and Punishment",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 30,
+    "pagecount": 144
+  },
+  {
+    "id": 144,
+    "name": "Fairy Prince and Other Wonderful Stories",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 26,
+    "pagecount": 219
+  },
+  {
+    "id": 145,
+    "name": "Adam Bede",
+    "genre": {
+      "id": 4,
+      "name": "Action and Adventure"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 18,
+      "name": "George",
+      "surname": "Eliot"
+    },
+    "points": 63,
+    "pagecount": 303
+  },
+  {
+    "id": 146,
+    "name": "Madam Crowl's ghost",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 23,
+      "name": "Joseph Sheridan",
+      "surname": "LeFanu"
+    },
+    "points": 34,
+    "pagecount": 344
+  },
+  {
+    "id": 147,
+    "name": "Is Anyone There?",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 42,
+    "pagecount": 178
+  },
+  {
+    "id": 148,
+    "name": "An Imperative Duty",
+    "genre": {
+      "id": 6,
+      "name": "Mystery"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 1,
+      "name": "William Dean",
+      "surname": "Howells"
+    },
+    "points": 41,
+    "pagecount": 100
+  },
+  {
+    "id": 149,
+    "name": "Adding a Dimension",
+    "genre": {
+      "id": 11,
+      "name": "Comics"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 37,
+    "pagecount": 334
+  },
+  {
+    "id": 150,
+    "name": "The Caves of Steel",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 9,
+      "name": "Isaac",
+      "surname": "Asimov"
+    },
+    "points": 21,
+    "pagecount": 98
+  },
+  {
+    "id": 151,
+    "name": "Carmilla",
+    "genre": {
+      "id": 18,
+      "name": "Art"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 23,
+      "name": "Joseph Sheridan",
+      "surname": "LeFanu"
+    },
+    "points": 23,
+    "pagecount": 91
+  },
+  {
+    "id": 152,
+    "name": "1919",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 24,
+      "name": "John",
+      "surname": "DosPassos"
+    },
+    "points": 60,
+    "pagecount": 105
+  },
+  {
+    "id": 153,
+    "name": "Pale Fire",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 26,
+      "name": "Vladimir",
+      "surname": "Nabokov"
+    },
+    "points": 80,
+    "pagecount": 250
+  },
+  {
+    "id": 154,
+    "name": "Martin Chuzzlewit",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 52,
+    "pagecount": 315
+  },
+  {
+    "id": 155,
+    "name": "Understood Betsy",
+    "genre": {
+      "id": 7,
+      "name": "Horror"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 12,
+      "name": "Dorothy",
+      "surname": "Canfield"
+    },
+    "points": 86,
+    "pagecount": 130
+  },
+  {
+    "id": 156,
+    "name": "The White Linen Nurse",
+    "genre": {
+      "id": 13,
+      "name": "Journals"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 36,
+      "name": "Eleanor Hallowell",
+      "surname": "Abbott"
+    },
+    "points": 35,
+    "pagecount": 369
+  },
+  {
+    "id": 157,
+    "name": "A Writer's Diary",
+    "genre": {
+      "id": 1,
+      "name": "Science fiction"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 87,
+    "pagecount": 164
+  },
+  {
+    "id": 158,
+    "name": "Pni",
+    "genre": {
+      "id": 14,
+      "name": "Biographies"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 26,
+      "name": "Vladimir",
+      "surname": "Nabokov"
+    },
+    "points": 68,
+    "pagecount": 233
+  },
+  {
+    "id": 159,
+    "name": "Honeymoon in Hell",
+    "genre": {
+      "id": 16,
+      "name": "History"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 2,
+      "name": "Frederic",
+      "surname": "Brown"
+    },
+    "points": 69,
+    "pagecount": 202
+  },
+  {
+    "id": 160,
+    "name": "The Black Arrow",
+    "genre": {
+      "id": 12,
+      "name": "Diaries"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 16,
+      "name": "Robert Louis",
+      "surname": "Stevenson"
+    },
+    "points": 87,
+    "pagecount": 366
+  },
+  {
+    "id": 161,
+    "name": "David Copperfield",
+    "genre": {
+      "id": 16,
+      "name": "History"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 10,
+      "name": "Charles",
+      "surname": "Dickens"
+    },
+    "points": 29,
+    "pagecount": 240
+  },
+  {
+    "id": 162,
+    "name": "Famous Ghost Stories",
+    "genre": {
+      "id": 3,
+      "name": "Drama"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 19,
+      "name": "Amelia B.",
+      "surname": "Edwards"
+    },
+    "points": 69,
+    "pagecount": 152
+  },
+  {
+    "id": 163,
+    "name": "Book Of Indian Braves",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 33,
+      "name": "Kate Dickinso",
+      "surname": "Sweetser"
+    },
+    "points": 53,
+    "pagecount": 117
+  },
+  {
+    "id": 164,
+    "name": "Binodini",
+    "genre": {
+      "id": 8,
+      "name": "Health"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 8,
+      "name": "Rabindranath",
+      "surname": "Tagore"
+    },
+    "points": 89,
+    "pagecount": 306
+  },
+  {
+    "id": 165,
+    "name": "Holly And Pizen, And Other Stories",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 25,
+      "name": "Ruth",
+      "surname": "Stuart"
+    },
+    "points": 77,
+    "pagecount": 220
+  },
+  {
+    "id": 166,
+    "name": "Lolita",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 26,
+      "name": "Vladimir",
+      "surname": "Nabokov"
+    },
+    "points": 89,
+    "pagecount": 153
+  },
+  {
+    "id": 167,
+    "name": "The Best Short Stories",
+    "genre": {
+      "id": 2,
+      "name": "Satire"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 20,
+      "name": "Fyodor",
+      "surname": "Dostoevsky"
+    },
+    "points": 27,
+    "pagecount": 115
+  },
+  {
+    "id": 168,
+    "name": "Cimarro",
+    "genre": {
+      "id": 17,
+      "name": "Science"
+    },
+    "_class": "ru.otus.spring.domain.Book",
+    "author": {
+      "id": 22,
+      "name": "Edna",
+      "surname": "Ferber"
+    },
+    "points": 33,
+    "pagecount": 101
+  },
+  {
+    "id": 1,
+    "text": "predictable",
+    "_class": "ru.otus.spring.domain.Comment",
+    "bookId": 1
+  },
+  {
+    "id": 2,
+    "text": "Das ist fantastisch",
+    "_class": "ru.otus.spring.domain.Comment",
+    "bookId": 14
+  },
+  {
+    "id": 3,
+    "text": "Das ist fantastisch",
+    "_class": "ru.otus.spring.domain.Comment",
+    "bookId": 1
+  }
+]
