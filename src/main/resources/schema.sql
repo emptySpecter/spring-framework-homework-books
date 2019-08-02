@@ -20,3 +20,10 @@ create TABLE books(
 	CONSTRAINT author_books FOREIGN KEY (type_id) references types(type_id) ON delete RESTRICT ON update CASCADE
 );
 
+create TABLE comments(
+    comment_id BIGSERIAL NOT NULL PRIMARY KEY,
+    book_id BIGINT NOT NULL,
+    text VARCHAR(255) NOT NULL,
+ 	CONSTRAINT book_comments FOREIGN KEY (book_id) references books(book_id) ON delete RESTRICT ON update CASCADE
+);
+

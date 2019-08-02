@@ -8,6 +8,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import ru.otus.spring.domain.Comment;
 import ru.otus.spring.repositories.CommentRepository;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -20,6 +22,13 @@ public class CommentRepositoryTest {
 
     @Autowired
     private CommentRepository commentRepository;
+
+    @DisplayName("должен загружать список всех жанрoв")
+    @Test
+    public void shouldReturnCorrectGenresList() {
+        List<Comment> comments = commentRepository.findAll();
+        assertThat(comments).isNotNull().hasSize(3).allMatch(a -> !a.getText().equals(""));
+    }
 
     @DisplayName("должен добовлять комментарий к книге в базу")
     @Test
