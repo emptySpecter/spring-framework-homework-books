@@ -225,4 +225,7 @@ insert into books (book_id, name, page_count, points, author_id, type_id) values
 insert into books (book_id, name, page_count, points, author_id, type_id) values (167, 'The Best Short Stories', 115, 27, 20, 2);
 insert into books (book_id, name, page_count, points, author_id, type_id) values (168, 'Cimarro', 101, 33, 22, 17);
 
+insert into comments (comment_id, book_id, text) values (1, 1, 'predictable');
+insert into comments (comment_id, book_id, text) values (2, 14, 'Das ist fantastisch');
+insert into comments (comment_id, book_id, text) values (3, 1, 'Das ist fantastisch');
 

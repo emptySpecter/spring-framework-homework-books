@@ -2,5 +2,13 @@ spring:
   shell:
     interactive:
       enabled: false
+
   datasource:
     data: data_test.sql
+
+  jpa:
+    generate-ddl: false
+    #    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    #      ddl-auto: create-drop
