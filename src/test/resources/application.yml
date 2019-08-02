@@ -4,7 +4,7 @@ spring:
       enabled: false
 
   datasource:
-    data: data_test.sql
+    json: data_test.json
 
   jpa:
     generate-ddl: false

@@ -1,3 +1,36 @@
+drop database IF EXISTS library;
+create DATABASE library;
+USE library;
+
+create TABLE authors(
+	author_id SERIAL NOT NULL PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	surname VARCHAR(70) NOT NULL
+);
+
+create TABLE types(
+	type_id SERIAL NOT NULL PRIMARY KEY ,
+	name VARCHAR(30) NOT NULL
+);
+
+create TABLE books(
+	book_id SERIAL NOT NULL PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	page_count BIGINT NOT NULL,
+	points BIGINT NOT NULL,
+	author_id BIGINT UNSIGNED NOT NULL,
+	type_id BIGINT UNSIGNED NOT NULL,
+	CONSTRAINT type_books FOREIGN KEY (author_id) references authors(author_id) ON delete RESTRICT ON update CASCADE,
+	CONSTRAINT author_books FOREIGN KEY (type_id) references types(type_id) ON delete RESTRICT ON update CASCADE
+);
+
+create TABLE comments(
+	comment_id SERIAL NOT NULL PRIMARY KEY ,
+    book_id BIGINT UNSIGNED NOT NULL,
+	text VARCHAR(256) NOT NULL,
+	CONSTRAINT book_commentss FOREIGN KEY (book_id) references books(book_id) ON delete RESTRICT ON update CASCADE
+);
+
 insert into authors (author_id, name, surname) values (1, 'William Dean', 'Howells');
 insert into authors (author_id, name, surname) values (2, 'Frederic', 'Brown');
 insert into authors (author_id, name, surname) values (3, 'Jack', 'London');
@@ -229,3 +262,40 @@ insert into comments (comment_id, book_id, text) values (1, 1, 'predictable');
 insert into comments (comment_id, book_id, text) values (2, 14, 'Das ist fantastisch');
 insert into comments (comment_id, book_id, text) values (3, 1, 'Das ist fantastisch');
 
+
+alter table `authors` ADD COLUMN _class VARCHAR(40) DEFAULT 'ru.otus.spring.domain.Author';
+alter table `books` ADD COLUMN _class VARCHAR(40) DEFAULT 'ru.otus.spring.domain.Book';
+alter table `types` ADD COLUMN _class VARCHAR(40) DEFAULT 'ru.otus.spring.domain.Genre';
+alter table `Comments` ADD COLUMN _class VARCHAR(40) DEFAULT 'ru.otus.spring.domain.Comment';
+
+select JSON_OBJECT('_class', `_class`, 'id', `author_id`, 'name', `name`, 'surname', `surname`)
+	INTO OUTFILE 'c:/tmp/authors.json' FROM `authors`;
+select JSON_OBJECT('_class', `_class`, 'id', `book_id`, 'name', `name`, 'pagecount',
+	`page_count`, 'points', `points`, 'author_id', `author_id`, 'genreid', `type_id`) 
+	INTO OUTFILE 'c:/tmp/books.json' FROM `books`;
+select JSON_OBJECT('_class', `_class`, 'id', `type_id`, 'name', `name`)
+	INTO OUTFILE 'c:/tmp/genres.json' FROM `types`;
+select JSON_OBJECT('_class', `_class`, 'id', `comment_id`, 'bookId', `book_id`, 'text', `text`)
+	INTO OUTFILE 'c:/tmp/comments.json' FROM `comments`;
+
+select JSON_OBJECT('_class', `books`.`_class`, 'id', `book_id`, 'name', `books`.`name`, 'pagecount', `page_count`, 'points', `points`,
+	'author', JSON_OBJECT('id', `authors`.`author_id`, 'name', `authors`.`name`, 'surname', `authors`.`surname`), 
+    'genre', JSON_OBJECT('id', `types`.`type_id`, 'name', `types`.`name`)) 
+	INTO OUTFILE 'c:/tmp/books_with_author_and_genre.json' 
+FROM `books` 
+INNER JOIN `authors` ON `authors`.`author_id` = `books`.`author_id`
+INNER JOIN `types` ON `types`.`type_id` = `books`.`type_id`
+ORDER BY `books`.`book_id`;
+
+select JSON_OBJECT('_class', `books`.`_class`, 'id', `book_id`, 'name', `books`.`name`, 'pagecount', `page_count`, 'points', `points`,
+	'author', JSON_OBJECT('id', `authors`.`author_id`, 'name', `authors`.`name`, 'surname', `authors`.`surname`), 
+    'genre', JSON_OBJECT('id', `types`.`type_id`, 'name', `types`.`name`),
+    'comments', (select cast(
+						concat('[', GROUP_CONCAT(JSON_OBJECT('id', `comments`.`comment_id`, 'text', `comments`.`text`)), ']')
+                    AS JSON) 
+				FROM `comments` where `comments`.`book_id` = `books`.`book_id`))
+	INTO OUTFILE 'c:/tmp/books_with_author_and_genre_and_comments.json' 
+FROM `books` 
+INNER JOIN `authors` ON `authors`.`author_id` = `books`.`author_id`
+INNER JOIN `types` ON `types`.`type_id` = `books`.`type_id`
+ORDER BY `books`.`book_id`;
