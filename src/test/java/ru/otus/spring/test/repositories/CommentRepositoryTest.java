@@ -5,23 +5,21 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.context.annotation.Import;
 import ru.otus.spring.domain.Comment;
-import ru.otus.spring.repositories.CommentRepositoryImpl;
+import ru.otus.spring.repositories.CommentRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("Репозиторий для работы с комментариями ")
 @DataJpaTest
-@Import(CommentRepositoryImpl.class)
-public class CommentRepositoryImplTest {
+public class CommentRepositoryTest {
 
     @Autowired
     private TestEntityManager em;
 
     @Autowired
-    private CommentRepositoryImpl commentRepository;
+    private CommentRepository commentRepository;
 
     @DisplayName("должен добовлять комментарий к книге в базу")
     @Test
@@ -31,7 +29,7 @@ public class CommentRepositoryImplTest {
         final String text = "comment.";
         Comment expectedComment = new Comment(commentId, text, bookId);
         long newId = (long) em.persistAndGetId(expectedComment);
-        Comment actualComment = commentRepository.getById(newId).get();
+        Comment actualComment = commentRepository.findById(newId).get();
         assertThat(actualComment.getId()).isNotNull();
         assertEquals(text, actualComment.getText());
 

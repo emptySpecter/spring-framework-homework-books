@@ -1,22 +1,19 @@
 package ru.otus.spring.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import ru.otus.spring.domain.Author;
 import ru.otus.spring.domain.Book;
-import ru.otus.spring.domain.BookWithComments;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface BookRepository {
-    void save(Book book);
+public interface BookRepository extends JpaRepository<Book, Long> {
 
-    Optional<Book> getById(long id);
+    @Query("select b from Book b join fetch b.genre join fetch b.author where b.author=:author")
+    List<Book> findByAuthor(Author author);
 
-    List<Book> getByAuthor(Author author);
+    @Override
+    @Query("select b from Book b join fetch b.genre join fetch b.author")
+    List<Book> findAll();
 
-    List<Book> getAll();
-
-    Optional<BookWithComments> getByIdWithComments(long id);
-
-    List<BookWithComments> getAllWithComments();
 }
