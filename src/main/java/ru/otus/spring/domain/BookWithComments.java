@@ -2,26 +2,25 @@ package ru.otus.spring.domain;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.persistence.*;
+import javax.persistence.Id;
 import java.util.List;
 
 @RequiredArgsConstructor
-@Entity
-@Table(name = "books")
 @Getter
+@Document
 public class BookWithComments {
 
     @Id
-    @Column(name = "book_id", nullable = false, unique = true)
+    @Field(value = "id")
     private long id;
 
-    @OneToOne(targetEntity = Book.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "book_id")
+    @Field(value = "book")
     private Book book;
 
-    @OneToMany(targetEntity = Comment.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "book_id")
+    @Field(value = "comments")
     private List<Comment> comments;
 
 }

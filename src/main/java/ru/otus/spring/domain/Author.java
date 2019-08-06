@@ -3,21 +3,21 @@ package ru.otus.spring.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.persistence.*;
+import javax.persistence.Id;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "authors")
+@Document(collection = "authors")
 public class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "author_id", nullable = false, unique = true)
+    @Field(value = "id")
     private long id;
-    @Column(name = "name", nullable = false)
+    @Field(value = "name")
     private String name;
-    @Column(name = "surname", nullable = false)
+    @Field(value = "surname")
     private String surname;
 }

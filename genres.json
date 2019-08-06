@@ -1,18 +1,18 @@
-{"id": 1, "name": "Science fiction", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 2, "name": "Satire", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 3, "name": "Drama", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 4, "name": "Action and Adventure", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 5, "name": "Romance", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 6, "name": "Mystery", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 7, "name": "Horror", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 8, "name": "Health", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 9, "name": "Guide", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 10, "name": "Diaries", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 11, "name": "Comics", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 12, "name": "Diaries", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 13, "name": "Journals", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 14, "name": "Biographies", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 15, "name": "Fantasy", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 16, "name": "History", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 17, "name": "Science", "_class": "ru.otus.spring.domain.Genre"}
-{"id": 18, "name": "Art", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 1, "name": "Science fiction", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 2, "name": "Satire", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 3, "name": "Drama", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 4, "name": "Action and Adventure", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 5, "name": "Romance", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 6, "name": "Mystery", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 7, "name": "Horror", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 8, "name": "Health", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 9, "name": "Guide", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 10, "name": "Diaries", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 11, "name": "Comics", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 12, "name": "Diaries", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 13, "name": "Journals", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 14, "name": "Biographies", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 15, "name": "Fantasy", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 16, "name": "History", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 17, "name": "Science", "_class": "ru.otus.spring.domain.Genre"}
+{"_id": 18, "name": "Art", "_class": "ru.otus.spring.domain.Genre"}

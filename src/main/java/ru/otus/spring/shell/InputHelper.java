@@ -1,6 +1,6 @@
 package ru.otus.spring.shell;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
@@ -33,7 +33,7 @@ public class InputHelper {
         return str;
     }
 
-    public static <T> T readObjectParameter(JpaRepository repository, Scanner in, PrintStream out, String prompt, String validation) {
+    public static <T> T readObjectParameter(MongoRepository repository, Scanner in, PrintStream out, String prompt, String validation) {
         T object;
         while (true) {
             out.print(prompt);

@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Comment;
 import ru.otus.spring.repositories.BookRepository;
-import ru.otus.spring.repositories.CommentRepository;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -25,7 +24,6 @@ public class NewCommentServiceImpl implements NewCommentService {
     private static final String TEXT_MUST_LESS_THAN_256_SYMBOLS = "Length of comment must be less than 256 symbols!\n";
 
     private final BookRepository bookRepository;
-    private final CommentRepository commentRepository;
 
     private PrintStream out;
     private Scanner in;
@@ -49,7 +47,8 @@ public class NewCommentServiceImpl implements NewCommentService {
         out.print("\nWould you like to add this comment to DB? [Y,N]:\n");
         String confirmation = in.nextLine();
         if (confirmation.toUpperCase().equals("Y")) {
-            commentRepository.save(comment);
+            book.getComments().add(comment);
+            bookRepository.save(book);
         }
     }
 }

@@ -63,7 +63,7 @@ public class BookRepositoryTest {
         Genre genre = genreRepository.findById(2L).get();
         // if I create just a new genre and author then persist dosen't work at all!
         Author author = authorRepository.findById(3L).get();
-        Book expectedBook = new Book(bookId, bookName, pagecount, points, genre, author);
+        Book expectedBook = new Book(bookId, bookName, pagecount, points, genre, author,null);
         long newId = (long) em.persistAndGetId(expectedBook);
         Book actuallBook = bookRepository.findById(newId).get();
         assertThat(actuallBook.getId()).isNotNull();

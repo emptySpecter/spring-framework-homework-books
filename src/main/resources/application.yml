@@ -3,10 +3,16 @@ spring:
     interactive:
       enabled: false
 
-  datasource:
-    url: jdbc:h2:mem:testdb
-    initialization-mode: always
-    json: data.json
+#  datasource:
+#    url: jdbc:h2:mem:testdb
+#    initialization-mode: always
+#    json: data.json
+
+  data:
+    mongodb:
+      uri: mongodb://localhost
+      port: 27017
+      database: library
 
   jpa:
     generate-ddl: false

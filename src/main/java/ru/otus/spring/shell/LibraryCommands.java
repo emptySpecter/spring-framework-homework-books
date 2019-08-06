@@ -9,7 +9,10 @@ import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.TableBuilder;
 import org.springframework.shell.table.TableModel;
 import ru.otus.spring.domain.*;
-import ru.otus.spring.repositories.*;
+import ru.otus.spring.repositories.AuthorRepository;
+import ru.otus.spring.repositories.BookRepository;
+import ru.otus.spring.repositories.BookWithCommentsRepository;
+import ru.otus.spring.repositories.GenreRepository;
 import ru.otus.spring.service.NewBookService;
 import ru.otus.spring.service.NewCommentService;
 
@@ -29,7 +32,6 @@ public class LibraryCommands {
     private final GenreRepository genreRepository;
     private final BookRepository bookRepository;
     private final BookWithCommentsRepository bookWithCommentsRepository;
-    private final CommentRepository commentRepository;
     private final NewBookService newBookService;
     private final NewCommentService newCommentService;
     private PrintStream out;
