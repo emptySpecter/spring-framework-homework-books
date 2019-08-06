@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
-import org.springframework.shell.table.BorderStyle;
 import org.springframework.shell.table.TableBuilder;
 import org.springframework.shell.table.TableModel;
 import ru.otus.spring.domain.*;
@@ -19,8 +18,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Scanner;
 
-import static ru.otus.spring.shell.TableHelper.getTableModelBean;
-import static ru.otus.spring.shell.TableHelper.getTableModelList;
+import static ru.otus.spring.shell.TableHelper.getFormattedTableBean;
+import static ru.otus.spring.shell.TableHelper.getFormattedTableList;
 
 @RequiredArgsConstructor
 @ShellComponent
@@ -47,11 +46,7 @@ public class LibraryCommands {
     public void authorsList() {
         List<Author> authors = authorRepository.findAll();
         if (!authors.isEmpty()) {
-            TableModel model = getTableModelList(authors);
-            TableBuilder tableBuilder = new TableBuilder(model);
-            tableBuilder.addInnerBorder(BorderStyle.fancy_light);
-            tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            out.print(tableBuilder.build().render(80));
+            out.print(getFormattedTableList(authors, 80));
         }
     }
 
@@ -59,11 +54,7 @@ public class LibraryCommands {
     public void genresList() {
         List<Genre> genres = genreRepository.findAll();
         if (!genres.isEmpty()) {
-            TableModel model = getTableModelList(genres);
-            TableBuilder tableBuilder = new TableBuilder(model);
-            tableBuilder.addInnerBorder(BorderStyle.fancy_light);
-            tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            out.print(tableBuilder.build().render(80));
+            out.print(getFormattedTableList(genres, 80));
         }
     }
 
@@ -72,13 +63,8 @@ public class LibraryCommands {
     public void commentsList(@ShellOption(value = {"-id"}, defaultValue = "0") long id) {
         if (id == 0) {
             List<BookWithComments> books = bookWithCommentsRepository.findAll();
-//            List<Book> books = bookRepository.findAll();
             if (!books.isEmpty()) {
-                TableModel model = getTableModelList(books);
-                TableBuilder tableBuilder = new TableBuilder(model);
-                tableBuilder.addInnerBorder(BorderStyle.fancy_light);
-                tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-                out.print(tableBuilder.build().render(160));
+                out.print(getFormattedTableList(books, 160));
             }
         } else {
             TableBuilder tableBuilder;
@@ -87,18 +73,12 @@ public class LibraryCommands {
             List<Comment> comments = book.getComments();
             if (comments.size() > 0) {
                 out.println("Comments;");
-                model = getTableModelList(comments);
-                tableBuilder = new TableBuilder(model);
-                tableBuilder.addFullBorder(BorderStyle.fancy_light);
-                out.print(tableBuilder.build().render(80));
+                out.print(getFormattedTableList(comments, 80));
             } else {
                 out.print("No comments ");
             }
             out.println("for the book:");
-            model = getTableModelBean(book.getBook());
-            tableBuilder = new TableBuilder(model);
-            tableBuilder.addFullBorder(BorderStyle.fancy_light);
-            out.print(tableBuilder.build().render(80));
+            out.print(getFormattedTableBean(book, 80));
         }
     }
 
@@ -111,11 +91,7 @@ public class LibraryCommands {
             books = bookRepository.findByAuthor(authorRepository.findById(id).get());
         }
         if (!books.isEmpty()) {
-            TableModel model = getTableModelList(books);
-            TableBuilder tableBuilder = new TableBuilder(model);
-            tableBuilder.addInnerBorder(BorderStyle.fancy_light);
-            tableBuilder.addHeaderBorder(BorderStyle.fancy_double);
-            out.print(tableBuilder.build().render(160));
+            out.print(getFormattedTableList(books, 160));
         }
     }
 

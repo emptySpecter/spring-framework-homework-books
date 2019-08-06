@@ -1,22 +1,17 @@
 package ru.otus.spring.service;
 
-import org.springframework.shell.table.BorderStyle;
-import org.springframework.shell.table.TableBuilder;
-import org.springframework.shell.table.TableModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.otus.spring.domain.Author;
 import ru.otus.spring.domain.Book;
-import ru.otus.spring.domain.Genre;
 import ru.otus.spring.repositories.AuthorRepository;
 import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.GenreRepository;
 
 import java.io.PrintStream;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import static ru.otus.spring.shell.TableHelper.getTableModelBean;
+import static ru.otus.spring.shell.InputHelper.*;
+import static ru.otus.spring.shell.TableHelper.getFormattedTableBean;
 
 @Service
 public class NewBookServiceImpl implements NewBookService {
@@ -53,97 +48,18 @@ public class NewBookServiceImpl implements NewBookService {
 
         Book book = new Book();
         book.setId(0L);
-        book.setName(readBookName());
-        book.setPagecount(readPagecount());
-        book.setPoints(readPoints());
-        book.setAuthor(readAuthor());
-        book.setGenre(readGenre());
+        book.setName(readStringParameter(in, out, ENTER_BOOK_TITLE, TITLE_MUST_LESS_THAN_256_SYMBOLS));
+        book.setPagecount(readIntParameter(in, out, ENTER_NUMBER_OF_PAGES, COUNT_MUST_BE_AN_INTEGER_NUMBER));
+        book.setPoints(readIntParameter(in, out, ENTER_NUMBER_OF_POINTS, POINTS_MUST_BE_AN_INTEGER_NUMBER));
+        book.setAuthor(readObjectParameter(authorRepository, in, out, ENTER_AUTHOR_ID, WRONG_AUTHOR_S_ID));
+        book.setGenre(readObjectParameter(genreRepository, in, out, ENTER_GENRE_ID, WRONG_GENRE_S_ID));
 
         out.print("\nYou are going to add new book: \n\n");
-        TableModel model = getTableModelBean(book);
-        TableBuilder tableBuilder = new TableBuilder(model);
-        tableBuilder.addFullBorder(BorderStyle.fancy_light);
-        out.print(tableBuilder.build().render(80));
+        out.print(getFormattedTableBean(book, 80));
         out.print("\nWould you like to add this book to DB? [Y,N]:\n");
         String confirmation = in.nextLine();
-        if (confirmation.equals("Y")) {
+        if (confirmation.toUpperCase().equals("Y")) {
             bookRepository.save(book);
         }
     }
-
-    private String readBookName() {
-        String bookName;
-        while (true) {
-            out.print(ENTER_BOOK_TITLE);
-            bookName = in.nextLine();
-            if (bookName.length() <= 255) break;
-            out.print(TITLE_MUST_LESS_THAN_256_SYMBOLS);
-        }
-        return bookName;
-    }
-
-    private int readPagecount() {
-        int pagecount;
-        while (true) {
-            out.print(ENTER_NUMBER_OF_PAGES);
-            String tmp = in.nextLine();
-            if (tmp.matches("[\\d]+")) {
-                pagecount = Integer.valueOf(tmp);
-                break;
-            }
-            out.print(COUNT_MUST_BE_AN_INTEGER_NUMBER);
-        }
-        return pagecount;
-    }
-
-    private int readPoints() {
-        int points;
-        while (true) {
-            out.print(ENTER_NUMBER_OF_POINTS);
-            String tmp = in.nextLine();
-            if (tmp.matches("[\\d]+")) {
-                points = Integer.valueOf(tmp);
-                break;
-            }
-            out.print(POINTS_MUST_BE_AN_INTEGER_NUMBER);
-        }
-        return points;
-    }
-
-    private Author readAuthor() {
-        Author author;
-        while (true) {
-            out.print(ENTER_AUTHOR_ID);
-            String tmp = in.nextLine();
-            if (tmp.matches("[\\d]+")) {
-                long id = Long.valueOf(tmp);
-                try {
-                    author = authorRepository.findById(id).get();
-                    break;
-                } catch (NoSuchElementException e) {
-                }
-            }
-            out.print(WRONG_AUTHOR_S_ID);
-        }
-        return author;
-    }
-
-    private Genre readGenre() {
-        Genre genre;
-        while (true) {
-            out.print(ENTER_GENRE_ID);
-            String tmp = in.nextLine();
-            if (tmp.matches("[\\d]+")) {
-                long id = Long.valueOf(tmp);
-                try {
-                    genre = genreRepository.findById(id).get();
-                    break;
-                } catch (NoSuchElementException e) {
-                }
-            }
-            out.print(WRONG_GENRE_S_ID);
-        }
-        return genre;
-    }
-
 }
