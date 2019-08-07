@@ -1,5 +1,6 @@
 package ru.otus.spring.test.repositories;
 
+import org.bson.types.ObjectId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class AuthorRepositoryTest {
     @DisplayName("должен загружать автора с заданным id")
     @Test
     public void shouldReturnCorrectAuthorById() {
-        Optional<Author> optional = repository.findById(1L);
+        Optional<Author> optional = repository.findById(new ObjectId("5d4ab3ea6b907f076c7a8dd8"));
 //        assertThat(optional.isPresent()).isTrue();
         assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
                 .hasFieldOrPropertyWithValue("surname", "Howells");

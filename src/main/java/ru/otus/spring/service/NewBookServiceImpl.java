@@ -47,7 +47,7 @@ public class NewBookServiceImpl implements NewBookService {
         this.out = out;
 
         Book book = new Book();
-        book.setId(0L);
+        book.setId(null);
         book.setName(readStringParameter(in, out, ENTER_BOOK_TITLE, TITLE_MUST_LESS_THAN_256_SYMBOLS));
         book.setPagecount(readIntParameter(in, out, ENTER_NUMBER_OF_PAGES, COUNT_MUST_BE_AN_INTEGER_NUMBER));
         book.setPoints(readIntParameter(in, out, ENTER_NUMBER_OF_POINTS, POINTS_MUST_BE_AN_INTEGER_NUMBER));

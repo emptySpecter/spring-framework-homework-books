@@ -1,5 +1,6 @@
 package ru.otus.spring.test.repositories;
 
+import org.bson.types.ObjectId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +49,7 @@ public class BookRepositoryTest {
     @DisplayName("должен загружать книгу с заданным id")
     @Test
     public void shouldReturnCorrectBookById() {
-        Optional<Book> optional = bookRepository.findById(1L);
+        Optional<Book> optional = bookRepository.findById("5d4ab4056b907f076c7a8dfc");
         assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
                 .hasFieldOrPropertyWithValue("name", "A Daughter of the Snows");
     }
@@ -56,15 +57,14 @@ public class BookRepositoryTest {
     @DisplayName("должен добовлять книгу в базу")
     @Test
     public void shouldCorrectAddBook() {
-        final long bookId = 0;
+        final String bookId = null;
         final long pagecount = 15;
         final long points = 10;
         final String bookName = "Book";
-        Genre genre = genreRepository.findById(2L).get();
-        // if I create just a new genre and author then persist dosen't work at all!
-        Author author = authorRepository.findById(3L).get();
+        Genre genre = genreRepository.findById("5d4ab41e6b907f076c7a8ea5").get();
+        Author author = authorRepository.findById(new ObjectId("5d4ab3ea6b907f076c7a8dda")).get();
         Book expectedBook = new Book(bookId, bookName, pagecount, points, genre, author,null);
-        long newId = (long) em.persistAndGetId(expectedBook);
+        String newId = (String) em.persistAndGetId(expectedBook);
         Book actuallBook = bookRepository.findById(newId).get();
         assertThat(actuallBook.getId()).isNotNull();
         assertEquals(expectedBook.getName(), actuallBook.getName());

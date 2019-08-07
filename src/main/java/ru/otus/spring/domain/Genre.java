@@ -14,8 +14,8 @@ import javax.persistence.Id;
 @Document(collection = "genres")
 public class Genre {
     @Id
-    @Field(value = "id")
-    private long id;
+    @Field(value = "_id")
+    private String id;
     @Field(value = "name")
     private String name;
 }

@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class Comment {
     private long id;
     private String text;
-    private long bookId;
+    private String bookId;
 }

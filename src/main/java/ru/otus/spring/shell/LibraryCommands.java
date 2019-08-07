@@ -1,6 +1,7 @@
 package ru.otus.spring.shell;
 
 import lombok.RequiredArgsConstructor;
+import org.bson.types.ObjectId;
 import org.jline.terminal.Terminal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
@@ -85,12 +86,14 @@ public class LibraryCommands {
     }
 
     @ShellMethod(value = "Display list of books (or 'bl -id author_id' for book with the corresponding author)", key = {"bl", "books"})
-    public void bookList(@ShellOption(value = {"-id"}, defaultValue = "0") long id) {
+    public void bookList(@ShellOption(value = {"-id"}, defaultValue = "") String id) {
         List<Book> books;
-        if (id == 0) {
+        if (id.isEmpty()) {
             books = bookRepository.findAll();
         } else {
-            books = bookRepository.findByAuthor(authorRepository.findById(id).get());
+            Author author = new Author(new ObjectId("5d4ab3ea6b907f076c7a8ded"),"Edna","Ferber");
+            books = bookRepository.findByAuthor(author);
+//            books = bookRepository.findByAuthor(authorRepository.findById(new ObjectId(id)).get());
         }
         if (!books.isEmpty()) {
             out.print(getFormattedTableList(books, 160));

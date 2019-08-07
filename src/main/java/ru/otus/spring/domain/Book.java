@@ -15,8 +15,8 @@ import java.util.List;
 @Document(collection = "books")
 public class Book {
     @Id
-    @Field(value = "id")
-    private long id;
+    @Field(value = "_id")
+    private String id;
     @Field(value = "name")
     private String name;
     @Field(value = "pagecount")

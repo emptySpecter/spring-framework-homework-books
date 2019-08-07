@@ -32,7 +32,7 @@ public class GenreRepositoryTest {
     @DisplayName("должен загружать жанр с заданным id")
     @Test
     public void shouldReturnCorrectGenreById() {
-        Optional<Genre> optional = repository.findById(1L);
+        Optional<Genre> optional = repository.findById("5d4ab41e6b907f076c7a8ea4");
         assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
                 .hasFieldOrPropertyWithValue("name", "Science fiction");
     }
