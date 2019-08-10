@@ -31,7 +31,7 @@ public class GenreRepositoryTest extends AbstractRepositoryTest {
     @Test
     public void shouldReturnCorrectGenreById() {
         Optional<Genre> optional = repository.findById("5d4ab41e6b907f076c7a8ea4");
-        assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
+        assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", "5d4ab41e6b907f076c7a8ea4")
                 .hasFieldOrPropertyWithValue("name", "Science fiction");
     }
 }

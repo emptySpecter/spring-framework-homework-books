@@ -48,9 +48,9 @@ public class NewCommentServiceImpl implements NewCommentService {
         String confirmation = in.nextLine();
         if (confirmation.toUpperCase().equals("Y")) {
             List<Comment> comments = book.getComments();
-            if(comments == null){
-               book.setComments(Collections.singletonList(comment));
-            }else{
+            if (comments == null) {
+                book.setComments(Collections.singletonList(comment));
+            } else {
                 comments.add(comment);
             }
             bookRepository.save(book);

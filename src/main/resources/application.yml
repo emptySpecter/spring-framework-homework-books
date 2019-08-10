@@ -1,29 +1,5 @@
 spring:
-#  shell:
-#    interactive:
-#      enabled: false
-
-  datasource:
-#    url: jdbc:h2:mem:testdb
-#    initialization-mode: always
-#    json: data.json
-
-  data:
-    mongodb:
-      uri: mongodb://localhost
-      port: 27017
-      database: library
-
-#  jpa:
-##    generate-ddl: false
-#    #    generate-ddl: true
-#    hibernate:
-#      ddl-auto: none
-#    #      ddl-auto: create-drop
-#
-#    show-sql: false
-
-logging:
-  level:
-    root: INFO
+  profiles:
+    active: dev
+#    active: prod
 

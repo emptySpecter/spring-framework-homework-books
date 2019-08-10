@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ComponentScan("ru.otus.spring.config")
 @DisplayName("Репозиторий для работы с авторами ")
-public class AuthorRepositoryTest extends AbstractRepositoryTest{
+public class AuthorRepositoryTest extends AbstractRepositoryTest {
 
     @Autowired
     private AuthorRepository repository;

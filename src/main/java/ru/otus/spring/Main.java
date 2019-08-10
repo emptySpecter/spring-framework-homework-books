@@ -12,12 +12,4 @@ public class Main {
         SpringApplication.run(Main.class, SPRING_SHELL_INTERACTIVE_ENABLED_TRUE);
     }
 
-//    @Bean
-//    public Jackson2RepositoryPopulatorFactoryBean getRespositoryPopulator(AppProps props) {
-//        Jackson2RepositoryPopulatorFactoryBean factory = new Jackson2RepositoryPopulatorFactoryBean();
-//        factory.setResources(new Resource[]{
-//                new ClassPathResource(props.getJson())
-//        });
-//        return factory;
-//    }
 }

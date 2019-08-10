@@ -4,7 +4,7 @@ spring:
       port: 0
       database: library
 
-    json: data_test.json
+    json: data.json
 
 logging:
   level:
