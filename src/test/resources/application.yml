@@ -1,14 +1,20 @@
 spring:
-  shell:
-    interactive:
-      enabled: false
+#  shell:
+#    interactive:
+#      enabled: false
+
+  data:
+    mongodb:
+      uri: mongodb://localhost
+      port: 27017
+      database: library
 
   datasource:
-    json: data_test.json
+#    json: data_test.json
 
-  jpa:
-    generate-ddl: false
-    #    generate-ddl: true
-    hibernate:
-      ddl-auto: none
-    #      ddl-auto: create-drop
+#  jpa:
+#    generate-ddl: false
+#    #    generate-ddl: true
+#    hibernate:
+#      ddl-auto: none
+#    #      ddl-auto: create-drop

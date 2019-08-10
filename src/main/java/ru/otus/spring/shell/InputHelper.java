@@ -38,8 +38,8 @@ public class InputHelper {
         while (true) {
             out.print(prompt);
             String tmp = in.nextLine();
-            if (tmp.matches("[\\d]+")) {
-                long id = Long.valueOf(tmp);
+            if (tmp.matches("[0-9a-f]+")) {
+                String id = tmp;
                 try {
                     object = (T) repository.findById(id).get();
                     break;

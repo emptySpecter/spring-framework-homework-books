@@ -3,10 +3,10 @@ package ru.otus.spring.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.persistence.Id;
 
 @Data
 @NoArgsConstructor
@@ -14,7 +14,6 @@ import javax.persistence.Id;
 @Document(collection = "genres")
 public class Genre {
     @Id
-    @Field(value = "_id")
     private String id;
     @Field(value = "name")
     private String name;

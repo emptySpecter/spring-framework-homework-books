@@ -8,6 +8,8 @@ import ru.otus.spring.domain.Comment;
 import ru.otus.spring.repositories.BookRepository;
 
 import java.io.PrintStream;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 import static ru.otus.spring.shell.InputHelper.readObjectParameter;
@@ -35,9 +37,7 @@ public class NewCommentServiceImpl implements NewCommentService {
         this.out = out;
 
         Comment comment = new Comment();
-        comment.setId(0L);
         Book book = readObjectParameter(bookRepository, in, out, ENTER_BOOK_ID, WRONG_BOOK_S_ID);
-        comment.setBookId(book.getId());
         comment.setText(readStringParameter(in, out, ENTER_COMMENT_TEXT, TEXT_MUST_LESS_THAN_256_SYMBOLS));
 
         out.print("\nYou are going to add new comment: \n");
@@ -47,7 +47,12 @@ public class NewCommentServiceImpl implements NewCommentService {
         out.print("\nWould you like to add this comment to DB? [Y,N]:\n");
         String confirmation = in.nextLine();
         if (confirmation.toUpperCase().equals("Y")) {
-            book.getComments().add(comment);
+            List<Comment> comments = book.getComments();
+            if(comments == null){
+               book.setComments(Collections.singletonList(comment));
+            }else{
+                comments.add(comment);
+            }
             bookRepository.save(book);
         }
     }

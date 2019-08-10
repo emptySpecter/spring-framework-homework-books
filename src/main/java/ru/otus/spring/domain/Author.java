@@ -3,11 +3,9 @@ package ru.otus.spring.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-
-import javax.persistence.Id;
 
 @Data
 @NoArgsConstructor
@@ -15,8 +13,7 @@ import javax.persistence.Id;
 @Document(collection = "authors")
 public class Author {
     @Id
-    @Field(value = "_id")
-    private ObjectId id;
+    private String id;
     @Field(value = "name")
     private String name;
     @Field(value = "surname")

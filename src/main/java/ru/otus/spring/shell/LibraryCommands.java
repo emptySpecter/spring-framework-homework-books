@@ -1,7 +1,6 @@
 package ru.otus.spring.shell;
 
 import lombok.RequiredArgsConstructor;
-import org.bson.types.ObjectId;
 import org.jline.terminal.Terminal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
@@ -9,10 +8,12 @@ import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.TableBuilder;
 import org.springframework.shell.table.TableModel;
-import ru.otus.spring.domain.*;
+import ru.otus.spring.domain.Author;
+import ru.otus.spring.domain.Book;
+import ru.otus.spring.domain.Comment;
+import ru.otus.spring.domain.Genre;
 import ru.otus.spring.repositories.AuthorRepository;
 import ru.otus.spring.repositories.BookRepository;
-import ru.otus.spring.repositories.BookWithCommentsRepository;
 import ru.otus.spring.repositories.GenreRepository;
 import ru.otus.spring.service.NewBookService;
 import ru.otus.spring.service.NewCommentService;
@@ -32,7 +33,6 @@ public class LibraryCommands {
     private final AuthorRepository authorRepository;
     private final GenreRepository genreRepository;
     private final BookRepository bookRepository;
-    private final BookWithCommentsRepository bookWithCommentsRepository;
     private final NewBookService newBookService;
     private final NewCommentService newCommentService;
     private PrintStream out;
@@ -63,16 +63,16 @@ public class LibraryCommands {
 
 
     @ShellMethod(value = "Display list of comments for book with id (for all books if id=0)", key = {"cl", "comments"})
-    public void commentsList(@ShellOption(value = {"-id"}, defaultValue = "0") long id) {
-        if (id == 0) {
-            List<BookWithComments> books = bookWithCommentsRepository.findAll();
+    public void commentsList(@ShellOption(value = {"-id"}, defaultValue = "") String id) {
+        if (id.isEmpty()) {
+            List<Book> books = bookRepository.findByCommentsNotNull();
             if (!books.isEmpty()) {
                 out.print(getFormattedTableList(books, 160));
             }
         } else {
             TableBuilder tableBuilder;
             TableModel model;
-            BookWithComments book = bookWithCommentsRepository.findById(id).get();
+            Book book = bookRepository.findById(id).get();
             List<Comment> comments = book.getComments();
             if (comments.size() > 0) {
                 out.println("Comments;");
@@ -91,9 +91,7 @@ public class LibraryCommands {
         if (id.isEmpty()) {
             books = bookRepository.findAll();
         } else {
-            Author author = new Author(new ObjectId("5d4ab3ea6b907f076c7a8ded"),"Edna","Ferber");
-            books = bookRepository.findByAuthor(author);
-//            books = bookRepository.findByAuthor(authorRepository.findById(new ObjectId(id)).get());
+            books = bookRepository.findByAuthor(authorRepository.findById(id).get());
         }
         if (!books.isEmpty()) {
             out.print(getFormattedTableList(books, 160));

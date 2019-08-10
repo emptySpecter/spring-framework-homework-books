@@ -1,10 +1,8 @@
 package ru.otus.spring.test.repositories;
 
-import org.bson.types.ObjectId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.ComponentScan;
 import ru.otus.spring.domain.Author;
 import ru.otus.spring.repositories.AuthorRepository;
@@ -16,8 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ComponentScan("ru.otus.spring.config")
 @DisplayName("Репозиторий для работы с авторами ")
-@DataJpaTest
-public class AuthorRepositoryTest {
+public class AuthorRepositoryTest extends AbstractRepositoryTest{
 
     @Autowired
     private AuthorRepository repository;
@@ -32,9 +29,8 @@ public class AuthorRepositoryTest {
     @DisplayName("должен загружать автора с заданным id")
     @Test
     public void shouldReturnCorrectAuthorById() {
-        Optional<Author> optional = repository.findById(new ObjectId("5d4ab3ea6b907f076c7a8dd8"));
-//        assertThat(optional.isPresent()).isTrue();
-        assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", 1L)
+        Optional<Author> optional = repository.findById("5d4ab3ea6b907f076c7a8dd8");
+        assertThat(optional).isPresent().get().hasFieldOrPropertyWithValue("id", "5d4ab3ea6b907f076c7a8dd8")
                 .hasFieldOrPropertyWithValue("surname", "Howells");
     }
 }

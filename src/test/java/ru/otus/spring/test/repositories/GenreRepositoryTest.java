@@ -3,7 +3,6 @@ package ru.otus.spring.test.repositories;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.ComponentScan;
 import ru.otus.spring.domain.Genre;
 import ru.otus.spring.repositories.GenreRepository;
@@ -16,8 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ComponentScan("ru.otus.spring.config")
 @DisplayName("Репозиторий для работы с жанрами ")
-@DataJpaTest
-public class GenreRepositoryTest {
+public class GenreRepositoryTest extends AbstractRepositoryTest {
 
     @Autowired
     private GenreRepository repository;
