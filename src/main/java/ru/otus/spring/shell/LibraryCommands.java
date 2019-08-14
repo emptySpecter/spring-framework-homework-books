@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
-import org.springframework.shell.table.TableBuilder;
-import org.springframework.shell.table.TableModel;
 import ru.otus.spring.domain.Author;
 import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Comment;
@@ -15,12 +13,13 @@ import ru.otus.spring.domain.Genre;
 import ru.otus.spring.repositories.AuthorRepository;
 import ru.otus.spring.repositories.BookRepository;
 import ru.otus.spring.repositories.GenreRepository;
-import ru.otus.spring.service.NewBookService;
+import ru.otus.spring.service.AddBookService;
 import ru.otus.spring.service.NewCommentService;
 
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import static ru.otus.spring.shell.TableHelper.getFormattedTableBean;
@@ -33,7 +32,7 @@ public class LibraryCommands {
     private final AuthorRepository authorRepository;
     private final GenreRepository genreRepository;
     private final BookRepository bookRepository;
-    private final NewBookService newBookService;
+    private final AddBookService addBookService;
     private final NewCommentService newCommentService;
     private PrintStream out;
     private Scanner in;
@@ -70,18 +69,20 @@ public class LibraryCommands {
                 out.print(getFormattedTableList(books, 160));
             }
         } else {
-            TableBuilder tableBuilder;
-            TableModel model;
-            Book book = bookRepository.findById(id).get();
-            List<Comment> comments = book.getComments();
-            if (comments.size() > 0) {
-                out.println("Comments;");
-                out.print(getFormattedTableList(comments, 80));
-            } else {
-                out.print("No comments ");
+            try {
+                Book book = bookRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Book not found"));
+                List<Comment> comments = book.getComments();
+                if (comments != null) {
+                    out.println("Comments:");
+                    out.print(getFormattedTableList(comments, 80));
+                } else {
+                    out.print("No comments ");
+                }
+                out.println("for the book:");
+                out.print(getFormattedTableBean(book, 80));
+            } catch (NoSuchElementException e) {
+                System.out.println(e.getMessage());
             }
-            out.println("for the book:");
-            out.print(getFormattedTableBean(book, 80));
         }
     }
 
@@ -100,7 +101,7 @@ public class LibraryCommands {
 
     @ShellMethod(value = "Add new book", key = {"ab", "add-book"})
     public void addBook() {
-        newBookService.newBook(in, out);
+        addBookService.newBook(in, out);
     }
 
     @ShellMethod(value = "Add new comment", key = {"ac", "add-cooment"})
