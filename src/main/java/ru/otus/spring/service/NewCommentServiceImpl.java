@@ -6,9 +6,10 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.otus.spring.domain.Book;
 import ru.otus.spring.domain.Comment;
 import ru.otus.spring.repositories.BookRepository;
-import ru.otus.spring.repositories.CommentRepository;
 
 import java.io.PrintStream;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 import static ru.otus.spring.shell.InputHelper.readObjectParameter;
@@ -25,7 +26,6 @@ public class NewCommentServiceImpl implements NewCommentService {
     private static final String TEXT_MUST_LESS_THAN_256_SYMBOLS = "Length of comment must be less than 256 symbols!\n";
 
     private final BookRepository bookRepository;
-    private final CommentRepository commentRepository;
 
     private PrintStream out;
     private Scanner in;
@@ -37,9 +37,7 @@ public class NewCommentServiceImpl implements NewCommentService {
         this.out = out;
 
         Comment comment = new Comment();
-        comment.setId(0L);
         Book book = readObjectParameter(bookRepository, in, out, ENTER_BOOK_ID, WRONG_BOOK_S_ID);
-        comment.setBookId(book.getId());
         comment.setText(readStringParameter(in, out, ENTER_COMMENT_TEXT, TEXT_MUST_LESS_THAN_256_SYMBOLS));
 
         out.print("\nYou are going to add new comment: \n");
@@ -49,7 +47,13 @@ public class NewCommentServiceImpl implements NewCommentService {
         out.print("\nWould you like to add this comment to DB? [Y,N]:\n");
         String confirmation = in.nextLine();
         if (confirmation.toUpperCase().equals("Y")) {
-            commentRepository.save(comment);
+            List<Comment> comments = book.getComments();
+            if (comments == null) {
+                book.setComments(Collections.singletonList(comment));
+            } else {
+                comments.add(comment);
+            }
+            bookRepository.save(book);
         }
     }
 }

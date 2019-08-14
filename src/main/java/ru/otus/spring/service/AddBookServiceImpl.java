@@ -14,7 +14,7 @@ import static ru.otus.spring.shell.InputHelper.*;
 import static ru.otus.spring.shell.TableHelper.getFormattedTableBean;
 
 @Service
-public class NewBookServiceImpl implements NewBookService {
+public class AddBookServiceImpl implements AddBookService {
 
     private static final String ENTER_BOOK_TITLE = "Enter book title:\n";
     private static final String TITLE_MUST_LESS_THAN_256_SYMBOLS = "Length of book title must be less than 256 symbols!\n";
@@ -30,11 +30,8 @@ public class NewBookServiceImpl implements NewBookService {
     private final AuthorRepository authorRepository;
     private final GenreRepository genreRepository;
     private final BookRepository bookRepository;
-    private PrintStream out;
-    private Scanner in;
 
-
-    public NewBookServiceImpl(AuthorRepository authorRepository, GenreRepository genreRepository, BookRepository bookRepository) {
+    public AddBookServiceImpl(AuthorRepository authorRepository, GenreRepository genreRepository, BookRepository bookRepository) {
         this.authorRepository = authorRepository;
         this.genreRepository = genreRepository;
         this.bookRepository = bookRepository;
@@ -43,11 +40,8 @@ public class NewBookServiceImpl implements NewBookService {
     @Override
     @Transactional
     public void newBook(Scanner in, PrintStream out) {
-        this.in = in;
-        this.out = out;
-
         Book book = new Book();
-        book.setId(0L);
+        book.setId(null);
         book.setName(readStringParameter(in, out, ENTER_BOOK_TITLE, TITLE_MUST_LESS_THAN_256_SYMBOLS));
         book.setPagecount(readIntParameter(in, out, ENTER_NUMBER_OF_PAGES, COUNT_MUST_BE_AN_INTEGER_NUMBER));
         book.setPoints(readIntParameter(in, out, ENTER_NUMBER_OF_POINTS, POINTS_MUST_BE_AN_INTEGER_NUMBER));

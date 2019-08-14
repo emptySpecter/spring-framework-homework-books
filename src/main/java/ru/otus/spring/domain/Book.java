@@ -3,29 +3,29 @@ package ru.otus.spring.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "books")
+@Document(collection = "books")
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id", nullable = false, unique = true)
-    private long id;
-    @Column(name = "name", nullable = false)
+    private String id;
+    @Field(value = "name")
     private String name;
-    @Column(name = "page_count", nullable = false)
+    @Field(value = "pagecount")
     private long pagecount;
-    @Column(name = "points", nullable = false)
+    @Field(value = "points")
     private long points;
-    @ManyToOne(targetEntity = Genre.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "type_id")
+    @Field(value = "genre")
     private Genre genre;
-    @ManyToOne(targetEntity = Author.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "author_id")
+    @Field(value = "author")
     private Author author;
+    @Field(value = "comments")
+    private List<Comment> comments;
 }

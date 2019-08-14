@@ -1,0 +1,18 @@
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8ea4"},"id":{"$numberInt":"1"},"name":"Science fiction","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8ea5"},"id":{"$numberInt":"2"},"name":"Satire","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8ea6"},"id":{"$numberInt":"3"},"name":"Drama","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8ea7"},"id":{"$numberInt":"4"},"name":"Action and Adventure","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8ea8"},"id":{"$numberInt":"5"},"name":"Romance","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8ea9"},"id":{"$numberInt":"6"},"name":"Mystery","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eaa"},"id":{"$numberInt":"7"},"name":"Horror","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eab"},"id":{"$numberInt":"8"},"name":"Health","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eac"},"id":{"$numberInt":"9"},"name":"Guide","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8ead"},"id":{"$numberInt":"10"},"name":"Diaries","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eae"},"id":{"$numberInt":"11"},"name":"Comics","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eaf"},"id":{"$numberInt":"12"},"name":"Diaries","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eb0"},"id":{"$numberInt":"13"},"name":"Journals","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eb1"},"id":{"$numberInt":"14"},"name":"Biographies","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eb2"},"id":{"$numberInt":"15"},"name":"Fantasy","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eb3"},"id":{"$numberInt":"16"},"name":"History","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eb4"},"id":{"$numberInt":"17"},"name":"Science","_class":"ru.otus.spring.domain.Genre"}
+{"_id":{"$oid":"5d4ab41e6b907f076c7a8eb5"},"id":{"$numberInt":"18"},"name":"Art","_class":"ru.otus.spring.domain.Genre"}

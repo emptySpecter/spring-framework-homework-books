@@ -1,0 +1,36 @@
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dd8"},"id":{"$numberInt":"1"},"name":"William Dean","_class":"ru.otus.spring.domain.Author","surname":"Howells"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dd9"},"id":{"$numberInt":"2"},"name":"Frederic","_class":"ru.otus.spring.domain.Author","surname":"Brown"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dda"},"id":{"$numberInt":"3"},"name":"Jack","_class":"ru.otus.spring.domain.Author","surname":"London"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8ddb"},"id":{"$numberInt":"4"},"name":"Albert","_class":"ru.otus.spring.domain.Author","surname":"Blaisdell"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8ddc"},"id":{"$numberInt":"5"},"name":"Ellis","_class":"ru.otus.spring.domain.Author","surname":"Butler"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8ddd"},"id":{"$numberInt":"6"},"name":"Arthur","_class":"ru.otus.spring.domain.Author","surname":"Machen"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dde"},"id":{"$numberInt":"7"},"name":"Titus","_class":"ru.otus.spring.domain.Author","surname":"Lucretius"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8ddf"},"id":{"$numberInt":"8"},"name":"Rabindranath","_class":"ru.otus.spring.domain.Author","surname":"Tagore"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de0"},"id":{"$numberInt":"9"},"name":"Isaac","_class":"ru.otus.spring.domain.Author","surname":"Asimov"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de1"},"id":{"$numberInt":"10"},"name":"Charles","_class":"ru.otus.spring.domain.Author","surname":"Dickens"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de2"},"id":{"$numberInt":"11"},"name":"Ralph Waldo","_class":"ru.otus.spring.domain.Author","surname":"Emerso"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de3"},"id":{"$numberInt":"12"},"name":"Dorothy","_class":"ru.otus.spring.domain.Author","surname":"Canfield"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de4"},"id":{"$numberInt":"13"},"name":"Givoanni","_class":"ru.otus.spring.domain.Author","surname":"Boccaccio"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de5"},"id":{"$numberInt":"14"},"name":"George","_class":"ru.otus.spring.domain.Author","surname":"Orwell"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de6"},"id":{"$numberInt":"15"},"name":"Publius","_class":"ru.otus.spring.domain.Author","surname":"Ovid"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de7"},"id":{"$numberInt":"16"},"name":"Robert Louis","_class":"ru.otus.spring.domain.Author","surname":"Stevenson"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de8"},"id":{"$numberInt":"17"},"name":"Virginia","_class":"ru.otus.spring.domain.Author","surname":"Woolf"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8de9"},"id":{"$numberInt":"18"},"name":"George","_class":"ru.otus.spring.domain.Author","surname":"Eliot"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dea"},"id":{"$numberInt":"19"},"name":"Amelia B.","_class":"ru.otus.spring.domain.Author","surname":"Edwards"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8deb"},"id":{"$numberInt":"20"},"name":"Fyodor","_class":"ru.otus.spring.domain.Author","surname":"Dostoevsky"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dec"},"id":{"$numberInt":"21"},"name":"Emily","_class":"ru.otus.spring.domain.Author","surname":"Dickinson"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8ded"},"id":{"$numberInt":"22"},"name":"Edna","_class":"ru.otus.spring.domain.Author","surname":"Ferber"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dee"},"id":{"$numberInt":"23"},"name":"Joseph Sheridan","_class":"ru.otus.spring.domain.Author","surname":"LeFanu"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8def"},"id":{"$numberInt":"24"},"name":"John","_class":"ru.otus.spring.domain.Author","surname":"DosPassos"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df0"},"id":{"$numberInt":"25"},"name":"Ruth","_class":"ru.otus.spring.domain.Author","surname":"Stuart"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df1"},"id":{"$numberInt":"26"},"name":"Vladimir","_class":"ru.otus.spring.domain.Author","surname":"Nabokov"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df2"},"id":{"$numberInt":"27"},"name":"Johanna","_class":"ru.otus.spring.domain.Author","surname":"Spyri"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df3"},"id":{"$numberInt":"28"},"name":"Ernest","_class":"ru.otus.spring.domain.Author","surname":"Dowson"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df4"},"id":{"$numberInt":"29"},"name":"Mary Hallock","_class":"ru.otus.spring.domain.Author","surname":"Foote"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df5"},"id":{"$numberInt":"30"},"name":"Zane","_class":"ru.otus.spring.domain.Author","surname":"Grey"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df6"},"id":{"$numberInt":"31"},"name":"H. P.","_class":"ru.otus.spring.domain.Author","surname":"Lovecraft"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df7"},"id":{"$numberInt":"32"},"name":"Samuel","_class":"ru.otus.spring.domain.Author","surname":"Pepys"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df8"},"id":{"$numberInt":"33"},"name":"Kate Dickinso","_class":"ru.otus.spring.domain.Author","surname":"Sweetser"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8df9"},"id":{"$numberInt":"34"},"name":"William","_class":"ru.otus.spring.domain.Author","surname":"Lampto"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dfa"},"id":{"$numberInt":"35"},"name":"Mother","_class":"ru.otus.spring.domain.Author","surname":"Goose"}
+{"_id":{"$oid":"5d4ab3ea6b907f076c7a8dfb"},"id":{"$numberInt":"36"},"name":"Eleanor Hallowell","_class":"ru.otus.spring.domain.Author","surname":"Abbott"}
